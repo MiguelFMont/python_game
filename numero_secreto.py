@@ -49,6 +49,10 @@ for i in range(1, 10):
     if chute == numero_secreto:
         print(f'Você acertou o número secreto!!\nNúmero de tentativas: {tentativas}')
         print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+        primeiro_digito = a
+        segundo_digito = b
+        terceiro_digito = c
+        quarto_digito = d
         break
     else:
         if a != x:
@@ -56,19 +60,18 @@ for i in range(1, 10):
                 if c != z:
                     if d != w:
                         print(f'Você não acertou nenhum digito dessa vez 😓\n\nTente Novamente! Você ainda tem {10 - tentativas} tentativas.\n')
-                    else:
-                        quarto_digito = d
-                        print(f'Você acertou o quarto digito (👍 ͡❛ _> ͡❛)👍!')
-                else:
-                    terceiro_digito = c
-                    print(f'Você acertou o terceiro digito (👍 ͡❛ _> ͡❛)👍!')
-            else:
-                segundo_digito = b
-                print(f'Você acertou o segundo digito (👍 ͡❛ _> ͡❛)👍!')
-        else:
-            primeiro_digito = a
-            print(f'Você acertou o primeiro digito (👍 ͡❛ _> ͡❛)👍!')
-
+    if a == x:
+        primeiro_digito = a
+        print(f'Você acertou o primeiro digito (👍 ͡❛ _> ͡❛)👍!')
+    if b == y:
+        segundo_digito = b
+        print(f'Você acertou o segundo digito (👍 ͡❛ _> ͡❛)👍!')
+    if c == z:
+        terceiro_digito = c
+        print(f'Você acertou o terceiro digito (👍 ͡❛ _> ͡❛)👍!')
+    if d == w:
+        quarto_digito = d
+        print(f'Você acertou o quarto digito (👍 ͡❛ _> ͡❛)👍!')
     tentativas += 1
 
     if tentativas >= 5:
@@ -104,6 +107,6 @@ for i in range(1, 10):
 
     if tentativas > 10:
         print('Número de tentativas foi exedido!!!')
-    
-print(f'Seu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+        
+    print(f'Seu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
 
