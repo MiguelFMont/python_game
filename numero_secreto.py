@@ -103,9 +103,7 @@ while x != 1:
                 if digitos_errados == 1:
                     print('Você não acertou nenhum digito dessa vez...')
 
-            digitos_certos = 0
-            
-            print(f'\nfaltam {10-tentativas} tentativas...')    
+            digitos_certos = 0   
 
             if chute == numero_secreto:
                 print(f'Você acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
@@ -115,6 +113,8 @@ while x != 1:
             if tentativas == 10:
                 print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
                 break
+
+            print(f'\nfaltam {10-tentativas} tentativas...') 
 
             if tentativas >= 5:
                 print(f'\nVou te dar uma díca!!')
