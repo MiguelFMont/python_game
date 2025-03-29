@@ -30,7 +30,7 @@ while x != 1:
     z = (numero_secreto // 10) % 10
     w = numero_secreto % 10
 
-    print(numero_secreto)
+    # print(numero_secreto)
 
     primeiro_digito = '_'
     segundo_digito = '_'
@@ -45,12 +45,13 @@ while x != 1:
 
     for i in range(1, 11):
         chute = int(input(f'\nDigite seu chute: '))
-        print('\n')
 
         if chute < 1000: 
             print("Número inválido! Digite somente números entre 1000 a 9999")
+            i -= 1
         elif chute > 9999:
             print("número inválido! Digite somente números entre 1000 a 9999")
+            i -= 1
         else:
             tentativas += 1
 
@@ -62,48 +63,39 @@ while x != 1:
             if primeiro_digito != x:
                 if a == x:
                     primeiro_digito = x
-                    print(f'Você acertou o primeiro digito (👍 ͡❛ _> ͡❛)👍!')
+                    print(f'\nVocê acertou o primeiro digito (👍 ͡❛ _> ͡❛)👍!')
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                else:
-                    digitos_errados = 1
                     
             if segundo_digito != y:
                 if b == y:
                     segundo_digito = y
-                    print(f'Você acertou o segundo digito (👍 ͡❛ _> ͡❛)👍!')
+                    print(f'\nVocê acertou o segundo digito (👍 ͡❛ _> ͡❛)👍!')
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                else:
-                    digitos_errados = 1
 
             if terceiro_digito != z:
                 if c == z:
                     terceiro_digito = z
-                    print(f'Você acertou o terceiro digito (👍 ͡❛ _> ͡❛)👍!')
+                    print(f'\nVocê acertou o terceiro digito (👍 ͡❛ _> ͡❛)👍!')
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                else:
-                    digitos_errados = 1
 
             if quarto_digito != w:      
                 if d == w:
                     quarto_digito = w
-                    print(f'Você acertou o quarto digito (👍 ͡❛ _> ͡❛)👍!')
+                    print(f'\nVocê acertou o quarto digito (👍 ͡❛ _> ͡❛)👍!')
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                else:
-                    digitos_errados = 1
             
             if digitos_certos == 0:
-                if digitos_errados == 1:
-                    print('Você não acertou nenhum digito dessa vez...')
+                print('\nVocê não acertou nenhum digito dessa vez...')
 
-            digitos_certos = 0   
+            digitos_certos = 0
 
             if chute == numero_secreto:
                 print(f'Você acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
@@ -117,7 +109,7 @@ while x != 1:
             print(f'\nfaltam {10-tentativas} tentativas...') 
 
             if tentativas >= 5:
-                print(f'\nVou te dar uma díca!!')
+                print(f'\nVou te dar uma dica!!')
                 if dica_maior_menor == 1:
                     if primeiro_digito != x:
                         if a > x:
@@ -205,7 +197,6 @@ while x != 1:
                     dica_maior_menor += 1
                     
             print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}') 
-            input('\n               <<< Tecle algo >>>\n') 
 
     continuar_para = int(input("\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: "))
     if continuar_para == 1:
