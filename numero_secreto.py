@@ -44,13 +44,13 @@ while x != 1:
     digitos_errados = 0
 
     for i in range(1, 11):
-        chute = int(input(f'\nDigite seu chute: '))
-
+        chute = str(input(f'\nDigite seu chute: '))
+             
         if chute < 1000: 
-            print("Número inválido! Digite somente números entre 1000 a 9999")
+            print('Número inválido! Digite somente números entre 1000 a 9999')
             i -= 1
         elif chute > 9999:
-            print("número inválido! Digite somente números entre 1000 a 9999")
+            print('número inválido! Digite somente números entre 1000 a 9999')
             i -= 1
         else:
             tentativas += 1
@@ -63,7 +63,7 @@ while x != 1:
             if primeiro_digito != x:
                 if a == x:
                     primeiro_digito = x
-                    print(f'\nVocê acertou o primeiro digito (👍 ͡❛ _> ͡❛)👍!')
+                    print(f'\nVocê acertou o primeiro dígito (👍 ͡❛ _> ͡❛)👍!')
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
@@ -79,7 +79,7 @@ while x != 1:
             if terceiro_digito != z:
                 if c == z:
                     terceiro_digito = z
-                    print(f'\nVocê acertou o terceiro digito (👍 ͡❛ _> ͡❛)👍!')
+                    print(f'\nVocê acertou o terceiro dígito (👍 ͡❛ _> ͡❛)👍!')
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
@@ -87,15 +87,12 @@ while x != 1:
             if quarto_digito != w:      
                 if d == w:
                     quarto_digito = w
-                    print(f'\nVocê acertou o quarto digito (👍 ͡❛ _> ͡❛)👍!')
+                    print(f'\nVocê acertou o quarto dígito (👍 ͡❛ _> ͡❛)👍!')
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
             
-            if digitos_certos == 0:
-                print('\nVocê não acertou nenhum digito dessa vez...')
-
-            digitos_certos = 0
+            
 
             if chute == numero_secreto:
                 print(f'Você acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
@@ -106,6 +103,10 @@ while x != 1:
                 print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
                 break
 
+            if digitos_certos == 0:
+                print('\nVocê não acertou nenhum dígito dessa vez...')
+
+            digitos_certos = 0
             print(f'\nfaltam {10-tentativas} tentativas...') 
 
             if tentativas >= 5:
@@ -113,93 +114,93 @@ while x != 1:
                 if dica_maior_menor == 1:
                     if primeiro_digito != x:
                         if a > x:
-                                print(f'==> O primeiro digito é menor que {a}')
+                                print(f'==> O primeiro dígito é menor que {a}')
                                 primeiro_digito = f'<{a}'
                         else: 
-                                print(f'==> O primeiro digito é maior que {a}')
+                                print(f'==> O primeiro dígito é maior que {a}')
                                 primeiro_digito = f'>{a}'
                     elif segundo_digito != y:
                         if b > y:
-                                print(f'==> O segundo digito é menor que {b}')
+                                print(f'==> O segundo dígito é menor que {b}')
                                 segundo_digito = f'<{b}'
                         else:
-                                print(f'==> O segundo digito é maior que {b}')
+                                print(f'==> O segundo dígito é maior que {b}')
                                 segundo_digito = f'>{b}'
                     elif terceiro_digito != z:           
                         if c > z:
-                                print(f'==> O terceiro digito é menor que {c}')
+                                print(f'==> O terceiro dígito é menor que {c}')
                                 terceiro_digito = f'<{c}'
                         else:
-                                print(f'==> O terceiro digito é maior que {c}')
+                                print(f'==> O terceiro dígito é maior que {c}')
                                 terceiro_digito = f'>{c}'
                     elif quarto_digito != w:           
                         if d > w:
-                                print(f'==> O quarto digito é menor que {d}')
+                                print(f'==> O quarto dígito é menor que {d}')
                                 quarto_digito = f'<{d}'
                         else:
-                                print(f'==> O quarto digito é maior que {d}')
+                                print(f'==> O quarto dígito é maior que {d}')
                                 quarto_digito = f'>{d}'
                     
                 if dica_par_impar == 1:
                     if a != x:
                         if x % 2 == 0:
-                            print(f'==> O primeiro digito é par!')
+                            print(f'==> O primeiro dígito é par!')
                             primeiro_digito = 'PAR'
                         else:
-                            print(f'==> O primeiro digito é ímpar!')
+                            print(f'==> O primeiro dígito é ímpar!')
                             primeiro_digito = 'ÍMPAR'
                     elif b!= y:
                         if y % 2 == 0:
                             if y == 0:
                                 if b > y:
-                                    print(f'==> O segundo digito é menor que {a}')
+                                    print(f'==> O segundo dígito é menor que {a}')
                                     segundo_digito = f'<{a}'
                                 else: 
-                                    print(f'==> O segundo digito é maior que {a}')
+                                    print(f'==> O segundo dígito é maior que {a}')
                                     segundo_digito = f'>{a}'
                             else:
-                                print(f'==> O segundo digito é par!')
+                                print(f'==> O segundo dígito é par!')
                                 segundo_digito = 'PAR'
                         else:
-                            print(f'==> O segundo digito é ímpar!')
+                            print(f'==> O segundo dígito é ímpar!')
                             segundo_digito = 'ÍMPAR'
                     elif c != z:
                         if z % 2 == 0:
                             if z == 0:
                                 if c > z:
-                                    print(f'==> O terceiro digito é menor que {c}')
+                                    print(f'==> O terceiro dígito é menor que {c}')
                                     terceiro_digito = f'<{c}'
                                 else:
-                                    print(f'==> O terceiro digito é maior que {c}')
+                                    print(f'==> O terceiro dígito é maior que {c}')
                                     terceiro_digito = f'>{c}'
                             else:
-                                print(f'==> O terceiro digito é par!')
+                                print(f'==> O terceiro dígito é par!')
                                 terceiro_digito = 'PAR'
                         else:
-                            print(f'==> O terceiro digito é ímpar!')
+                            print(f'==> O terceiro dígito é ímpar!')
                             terceiro_digito = 'ÍMPAR'
                     elif d != w:
                         if w % 2 == 0:
                             if w == 0:
                                 if d > w:
-                                    print(f'==> O quarto digito é menor que {d}')
+                                    print(f'==> O quarto dígito é menor que {d}')
                                     quarto_digito = f'<{d}'
                                 else:
-                                    print(f'==> O quarto digito é maior que {d}')
+                                    print(f'==> O quarto dígito é maior que {d}')
                                     quarto_digito = f'>{d}'
                             else:
-                                print(f'==> O quarto digito é par!')
+                                print(f'==> O quarto dígito é par!')
                                 quarto_digito = 'PAR'
                         else:
-                            print(f'==> O quarto digito é ímpar!')
+                            print(f'==> O quarto dígito é ímpar!')
                             quarto_digito = 'ÍMPAR'
                     dica_par_impar -= 1
                     dica_maior_menor += 1
                     
             print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}') 
 
-    continuar_para = int(input("\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: "))
-    if continuar_para == 1:
+    continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
+    if continuar_parar == 1:
         x = 0
     else: 
         x = 1
