@@ -44,8 +44,9 @@ while x != 1:
     digitos_errados = 0
 
     for i in range(1, 11):
-        chute = str(input(f'\nDigite seu chute: '))
-             
+        
+        chute = int(input(f'\nDigite seu chute: '))
+
         if chute < 1000: 
             print('Número inválido! Digite somente números entre 1000 a 9999')
             i -= 1
@@ -91,11 +92,9 @@ while x != 1:
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-            
-            
-
+                    
             if chute == numero_secreto:
-                print(f'Você acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
+                print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
                 print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
                 break
             
