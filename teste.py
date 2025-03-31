@@ -43,17 +43,26 @@ while x != 1:
     digitos_certos = 0
     digitos_errados = 0
 
-    while tentativas < 10:
-        
-        chute = int(input(f'\nDigite seu chute: '))
+    for i in range(1, 11):
 
+        while True:
+            
+            chute = (input(f'\nDigite seu chute: '))
+
+            if chute == '' or chute < '1000' or chute > '9999':
+                print(f'Entrada inválida! Digite novamente.')
+            else:
+                chute = int(chute)
+                break
         if chute < 1000: 
             print('Número inválido! Digite somente números entre 1000 a 9999')
-
+            i -= 1
         elif chute > 9999:
             print('número inválido! Digite somente números entre 1000 a 9999')
-
+            i -= 1
         else:
+            tentativas += 1
+
             a = (chute // 1000)
             b = (chute // 100 - (chute // 100 - (chute % 1000))) // 100
             c = (chute // 10) % 10
@@ -104,7 +113,7 @@ while x != 1:
                 print('\nVocê não acertou nenhum dígito dessa vez...')
 
             digitos_certos = 0
-            print(f'\nfaltam {9-tentativas} tentativas...') 
+            print(f'\nfaltam {10-tentativas} tentativas...') 
 
             if tentativas >= 5:
                 print(f'\nVou te dar uma dica!!')
@@ -139,14 +148,14 @@ while x != 1:
                                 quarto_digito = f'>{d}'
                     
                 if dica_par_impar == 1:
-                    if a != x:
+                    if primeiro_digito != x:
                         if x % 2 == 0:
                             print(f'==> O primeiro dígito é par!')
                             primeiro_digito = 'PAR'
                         else:
                             print(f'==> O primeiro dígito é ímpar!')
                             primeiro_digito = 'ÍMPAR'
-                    elif b!= y:
+                    elif segundo_digito != y:
                         if y % 2 == 0:
                             if y == 0:
                                 if b > y:
@@ -161,7 +170,7 @@ while x != 1:
                         else:
                             print(f'==> O segundo dígito é ímpar!')
                             segundo_digito = 'ÍMPAR'
-                    elif c != z:
+                    elif terceiro_digito != z:
                         if z % 2 == 0:
                             if z == 0:
                                 if c > z:
@@ -176,7 +185,7 @@ while x != 1:
                         else:
                             print(f'==> O terceiro dígito é ímpar!')
                             terceiro_digito = 'ÍMPAR'
-                    elif d != w:
+                    elif quarto_digito != w:
                         if w % 2 == 0:
                             if w == 0:
                                 if d > w:
@@ -194,7 +203,6 @@ while x != 1:
                     dica_par_impar -= 1
                     dica_maior_menor += 1
                     
-            tentativas += 1
             print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}') 
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
