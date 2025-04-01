@@ -46,7 +46,7 @@ while condicao_continuar_parar != 1:
 
     cont = 0
     
-    while cont < 9:
+    while cont < 10:
 
         while validacao_de_entrada == 0:
 
@@ -164,51 +164,31 @@ while condicao_continuar_parar != 1:
                         else:
                             print(f'==> O primeiro dígito é ímpar!')
                             primeiro_digito = 'ÍMPAR'
+
                     elif segundo_digito != y:
                         if y % 2 == 0:
-                            if y == 0:
-                                if b > y:
-                                    print(f'==> O segundo dígito é menor que {a}')
-                                    segundo_digito = f'<{a}'
-                                else: 
-                                    print(f'==> O segundo dígito é maior que {a}')
-                                    segundo_digito = f'>{a}'
-                            else:
                                 print(f'==> O segundo dígito é par!')
                                 segundo_digito = 'PAR'
                         else:
                             print(f'==> O segundo dígito é ímpar!')
                             segundo_digito = 'ÍMPAR'
+
                     elif terceiro_digito != z:
                         if z % 2 == 0:
-                            if z == 0:
-                                if c > z:
-                                    print(f'==> O terceiro dígito é menor que {c}')
-                                    terceiro_digito = f'<{c}'
-                                else:
-                                    print(f'==> O terceiro dígito é maior que {c}')
-                                    terceiro_digito = f'>{c}'
-                            else:
                                 print(f'==> O terceiro dígito é par!')
                                 terceiro_digito = 'PAR'
                         else:
                             print(f'==> O terceiro dígito é ímpar!')
                             terceiro_digito = 'ÍMPAR'
+
                     elif quarto_digito != w:
                         if w % 2 == 0:
-                            if w == 0:
-                                if d > w:
-                                    print(f'==> O quarto dígito é menor que {d}')
-                                    quarto_digito = f'<{d}'
-                                else:
-                                    print(f'==> O quarto dígito é maior que {d}')
-                                    quarto_digito = f'>{d}'
-                            else:
                                 print(f'==> O quarto dígito é par!')
                                 quarto_digito = 'PAR'
                         else:
                             print(f'==> O quarto dígito é ímpar!')
                             quarto_digito = 'ÍMPAR'
+                            
                     dica_par_impar -= 1
                     dica_maior_menor += 1
                     
