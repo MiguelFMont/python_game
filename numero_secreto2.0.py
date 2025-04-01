@@ -1,7 +1,7 @@
 #Jogo do número secreto
 import random
-x = 0
-while x != 1:
+condicao_continuar_parar = 0
+while condicao_continuar_parar != 1:
     print('''
     ░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ███╗░░██╗██╗░░░██╗███╗░░░███╗███████╗██████╗░░█████╗░
     ░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ████╗░██║██║░░░██║████╗░████║██╔════╝██╔══██╗██╔══██╗
@@ -41,19 +41,30 @@ while x != 1:
     dica_par_impar = 1
     dica_maior_menor = 0
     digitos_certos = 0
-    digitos_errados = 0
 
+    validacao_de_entrada = 0
+    
     for i in range(1, 11):
+    
 
-        while True:
-            
+        while validacao_de_entrada == 0:
+
             chute = (input(f'\nDigite seu chute: '))
 
-            if chute == '' or chute < '1000' or chute > '9999':
-                print(f'Entrada inválida! Digite novamente.')
+            if chute == '':
+                print('Entrada inválida. Digite apenas números.')
+                i-=1                
             else:
-                chute = int(chute)
-                break
+                for digitos in chute:
+                     if digitos < '0' or digitos > '9':
+                        print('Entrada inválida. Digite apenas números.')
+                        i-=1
+                        break
+                else:
+                    chute = int(chute)
+                    break
+            
+            
         if chute < 1000: 
             print('Número inválido! Digite somente números entre 1000 a 9999')
             i -= 1
@@ -203,10 +214,10 @@ while x != 1:
                     dica_par_impar -= 1
                     dica_maior_menor += 1
                     
-            print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}') 
+            print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
     if continuar_parar == 1:
-        x = 0
+        condicao_continuar_parar = 0
     else: 
-        x = 1
+        condicao_continuar_parar = 1
