@@ -21,7 +21,7 @@ while condicao_continuar_parar != 1:
     V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳
     A̳  p̳a̳r̳t̳i̳r̳  d̳a̳  5̳º̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳  o̳  j̳o̳g̳o̳  i̳r̳á̳  t̳e̳  a̳j̳u̳d̳a̳r̳,̳  d̳a̳n̳d̳o̳  d̳i̳c̳a̳s̳!̳
     ''')
-    input('<<< Tecle Algo Para Continuar! >>>')
+    input('<<< Tecle Enter Para Continuar! >>>')
 
     numero_secreto = random.randint(1000, 9999)
 
@@ -43,34 +43,32 @@ while condicao_continuar_parar != 1:
     digitos_certos = 0
 
     validacao_de_entrada = 0
+
+    cont = 0
     
-    for i in range(1, 11):
-    
+    while cont < 9:
 
         while validacao_de_entrada == 0:
 
             chute = (input(f'\nDigite seu chute: '))
 
             if chute == '':
-                print('Entrada inválida. Digite apenas números.')
-                i-=1                
+                print('Entrada inválida. Digite apenas números.')                
             else:
                 for digitos in chute:
                      if digitos < '0' or digitos > '9':
                         print('Entrada inválida. Digite apenas números.')
-                        i-=1
                         break
                 else:
                     chute = int(chute)
                     break
             
-            
         if chute < 1000: 
             print('Número inválido! Digite somente números entre 1000 a 9999')
-            i -= 1
+            
         elif chute > 9999:
             print('número inválido! Digite somente números entre 1000 a 9999')
-            i -= 1
+            
         else:
             tentativas += 1
 
@@ -134,29 +132,29 @@ while condicao_continuar_parar != 1:
                                 print(f'==> O primeiro dígito é menor que {a}')
                                 primeiro_digito = f'<{a}'
                         else: 
-                                print(f'==> O primeiro dígito é maior que {a}')
-                                primeiro_digito = f'>{a}'
+                            print(f'==> O primeiro dígito é maior que {a}')
+                            primeiro_digito = f'>{a}'
                     elif segundo_digito != y:
                         if b > y:
                                 print(f'==> O segundo dígito é menor que {b}')
                                 segundo_digito = f'<{b}'
                         else:
-                                print(f'==> O segundo dígito é maior que {b}')
-                                segundo_digito = f'>{b}'
+                            print(f'==> O segundo dígito é maior que {b}')
+                            segundo_digito = f'>{b}'
                     elif terceiro_digito != z:           
                         if c > z:
                                 print(f'==> O terceiro dígito é menor que {c}')
                                 terceiro_digito = f'<{c}'
                         else:
-                                print(f'==> O terceiro dígito é maior que {c}')
-                                terceiro_digito = f'>{c}'
+                            print(f'==> O terceiro dígito é maior que {c}')
+                            terceiro_digito = f'>{c}'
                     elif quarto_digito != w:           
                         if d > w:
                                 print(f'==> O quarto dígito é menor que {d}')
                                 quarto_digito = f'<{d}'
                         else:
-                                print(f'==> O quarto dígito é maior que {d}')
-                                quarto_digito = f'>{d}'
+                            print(f'==> O quarto dígito é maior que {d}')
+                            quarto_digito = f'>{d}'
                     
                 if dica_par_impar == 1:
                     if primeiro_digito != x:
@@ -215,6 +213,7 @@ while condicao_continuar_parar != 1:
                     dica_maior_menor += 1
                     
             print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+            cont += 1
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
     if continuar_parar == 1:
