@@ -45,7 +45,9 @@ while condicao_continuar_parar != 1:
     validacao_de_entrada = 0
 
     cont = 0
-    
+    cont_entradas_erradas = 0
+    cont_num_errados = 0
+
     while cont < 10:
 
         while validacao_de_entrada == 0:
@@ -53,22 +55,31 @@ while condicao_continuar_parar != 1:
             chute = (input(f'\nDigite seu chute: '))
 
             if chute == '':
-                print('Entrada inválida. Digite apenas números.')                
+                print('Entrada inválida. Digite apenas números.')   
+                cont_entradas_erradas += 1             
             else:
                 for digitos in chute:
                      if digitos < '0' or digitos > '9':
                         print('Entrada inválida. Digite apenas números.')
+                        cont_entradas_erradas += 1
                         break
                 else:
                     chute = int(chute)
                     break
+            if cont_entradas_erradas > 3:
+                tentativas += 1                
             
         if chute < 1000: 
             print('Número inválido! Digite somente números entre 1000 a 9999')
+            cont_num_errados += 1
             
         elif chute > 9999:
             print('número inválido! Digite somente números entre 1000 a 9999')
-            
+            cont_num_errados += 1
+        
+        elif cont_num_errados > 2:
+             tentativas += 1
+
         else:
             tentativas += 1
 
@@ -197,6 +208,6 @@ while condicao_continuar_parar != 1:
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
     if continuar_parar == 1:
-        condicao_continuar_parar = 0
+        condicao_continuar_parar = 0 
     else: 
         condicao_continuar_parar = 1
