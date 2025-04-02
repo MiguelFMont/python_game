@@ -17,36 +17,12 @@ while condicao_continuar_parar != 1:
     ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
     ''')
-    print('V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳')
-    jogar_regras = (input('<<< Tecle 1 Para Jogar! | Tecle 2 Para Exibir as Regras! >>>'))
+    print('''
+    V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳
+    A̳  p̳a̳r̳t̳i̳r̳  d̳a̳  5̳º̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳  o̳  j̳o̳g̳o̳  i̳r̳á̳  t̳e̳  a̳j̳u̳d̳a̳r̳,̳  d̳a̳n̳d̳o̳  d̳i̳c̳a̳s̳!̳
+    ''')
+    input('<<< Tecle Enter Para Continuar! >>>')
 
-    while jogar_regras == '2':
-        print('''
-                 
-                    █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
-                    █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
-              
-                    1. *Objetivo*: Acertar o número secreto, que é um número de 4 dígitos entre 1000 e 9999.
-                    2. *Tentativas*: Você tem 10 tentativas para adivinhar o número secreto.
-                    3. *Chutes*: Cada vez que você tentar um número, ele será verificado.
-                    - Se você acertar algum dígito, será informado.
-                    - Caso contrário, você receberá uma mensagem dizendo quantos dígitos você acertou.
-                    4. *Dicas*:
-                    - A partir da 5ª tentativa, você recebe dicas sobre os dígitos:
-                    - *Maior ou Menor*: Dica sobre se o dígito correto é maior ou menor que o seu chute.
-                    - *Par ou Ímpar*: Indicação se o dígito é par ou ímpar.
-                    5. *Validação*: Se você inserir um valor inválido (como uma letra ou número fora da faixa), será solicitado a tentar novamente.
-                    6. *Fim do Jogo*: O jogo termina quando:
-                    - Você acerta o número secreto.
-                    - Você faz 10 tentativas sem acertar.
-                    7. *Reiniciar*: Após o fim de uma rodada, você pode escolher continuar ou sair.
-        ''')
-        input('<<< Digite enter para retornar >>>')
-        break
-    else:
-        if jogar_regras != '1' or jogar_regras == '':
-         input('<<< Digite somente 1 ou 2! >>>')
-            
     numero_secreto = random.randint(1000, 9999)
 
     x = (numero_secreto // 1000)
@@ -69,7 +45,7 @@ while condicao_continuar_parar != 1:
     validacao_de_entrada = 0
 
     cont = 0
-
+    
     while cont < 10:
 
         while validacao_de_entrada == 0:
@@ -77,22 +53,23 @@ while condicao_continuar_parar != 1:
             chute = (input(f'\nDigite seu chute: '))
 
             if chute == '':
-                    print('Entrada inválida. Digite apenas números.')   
+                print('Entrada inválida. Digite apenas números.')                
             else:
                 for digitos in chute:
-                    if digitos < '0' or digitos > '9':
+                     if digitos < '0' or digitos > '9':
                         print('Entrada inválida. Digite apenas números.')
                         break
                 else:
                     chute = int(chute)
-                    validacao_de_entrada = 1
-                
+                    break
+            
         if chute < 1000: 
             print('Número inválido! Digite somente números entre 1000 a 9999')
+            
         elif chute > 9999:
             print('número inválido! Digite somente números entre 1000 a 9999')
+            
         else:
-            validacao_de_entrada = 0
             tentativas += 1
 
             a = (chute // 1000)
@@ -107,7 +84,7 @@ while condicao_continuar_parar != 1:
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                        
+                    
             if segundo_digito != y:
                 if b == y:
                     segundo_digito = y
@@ -131,15 +108,12 @@ while condicao_continuar_parar != 1:
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-
-            if primeiro_digito == x:
-                if segundo_digito == y:
-                    if terceiro_digito == z:
-                         if quarto_digito == w:
-                            print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
-                            print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
-                            break
-                
+                    
+            if chute == numero_secreto:
+                print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
+                print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+                break
+            
             if tentativas == 10:
                 print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
                 break
@@ -181,7 +155,7 @@ while condicao_continuar_parar != 1:
                         else:
                             print(f'==> O quarto dígito é maior que {d}')
                             quarto_digito = f'>{d}'
-                        
+                    
                 if dica_par_impar == 1:
                     if primeiro_digito != x:
                         if x % 2 == 0:
@@ -214,17 +188,15 @@ while condicao_continuar_parar != 1:
                         else:
                             print(f'==> O quarto dígito é ímpar!')
                             quarto_digito = 'ÍMPAR'
-                                
+                            
                     dica_par_impar -= 1
                     dica_maior_menor += 1
-                        
+                    
             print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
             cont += 1
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
     if continuar_parar == 1:
-        condicao_continuar_parar = 0 
+        condicao_continuar_parar = 0
     else: 
         condicao_continuar_parar = 1
-    
-    
