@@ -2,26 +2,69 @@
 import random
 condicao_continuar_parar = 0
 while condicao_continuar_parar != 1:
-    print('''
-    ░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ███╗░░██╗██╗░░░██╗███╗░░░███╗███████╗██████╗░░█████╗░
-    ░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ████╗░██║██║░░░██║████╗░████║██╔════╝██╔══██╗██╔══██╗
-    ░░░░░██║██║░░██║██║░░██╗░██║░░██║  ██║░░██║██║░░██║  ██╔██╗██║██║░░░██║██╔████╔██║█████╗░░██████╔╝██║░░██║
-    ██╗░░██║██║░░██║██║░░╚██╗██║░░██║  ██║░░██║██║░░██║  ██║╚████║██║░░░██║██║╚██╔╝██║██╔══╝░░██╔══██╗██║░░██║
-    ╚█████╔╝╚█████╔╝╚██████╔╝╚█████╔╝  ██████╔╝╚█████╔╝  ██║░╚███║╚██████╔╝██║░╚═╝░██║███████╗██║░░██║╚█████╔╝
-    ░╚════╝░░╚════╝░░╚═════╝░░╚════╝░  ╚═════╝░░╚════╝░  ╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░
 
-    ░██████╗███████╗░█████╗░██████╗░███████╗████████╗░█████╗░
-    ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
-    ╚█████╗░█████╗░░██║░░╚═╝██████╔╝█████╗░░░░░██║░░░██║░░██║
-    ░╚═══██╗██╔══╝░░██║░░██╗██╔══██╗██╔══╝░░░░░██║░░░██║░░██║
-    ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
-    ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
-    ''')
-    print('''
-    V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳
-    A̳  p̳a̳r̳t̳i̳r̳  d̳a̳  5̳º̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳  o̳  j̳o̳g̳o̳  i̳r̳á̳  t̳e̳  a̳j̳u̳d̳a̳r̳,̳  d̳a̳n̳d̳o̳  d̳i̳c̳a̳s̳!̳
-    ''')
-    input('<<< Tecle Enter Para Continuar! >>>')
+    iniciar = 0
+
+    while iniciar == 0:
+        print('''
+        ░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ███╗░░██╗██╗░░░██╗███╗░░░███╗███████╗██████╗░░█████╗░
+        ░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ████╗░██║██║░░░██║████╗░████║██╔════╝██╔══██╗██╔══██╗
+        ░░░░░██║██║░░██║██║░░██╗░██║░░██║  ██║░░██║██║░░██║  ██╔██╗██║██║░░░██║██╔████╔██║█████╗░░██████╔╝██║░░██║
+        ██╗░░██║██║░░██║██║░░╚██╗██║░░██║  ██║░░██║██║░░██║  ██║╚████║██║░░░██║██║╚██╔╝██║██╔══╝░░██╔══██╗██║░░██║
+        ╚█████╔╝╚█████╔╝╚██████╔╝╚█████╔╝  ██████╔╝╚█████╔╝  ██║░╚███║╚██████╔╝██║░╚═╝░██║███████╗██║░░██║╚█████╔╝
+        ░╚════╝░░╚════╝░░╚═════╝░░╚════╝░  ╚═════╝░░╚════╝░  ╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░
+
+        ░██████╗███████╗░█████╗░██████╗░███████╗████████╗░█████╗░
+        ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
+        ╚█████╗░█████╗░░██║░░╚═╝██████╔╝█████╗░░░░░██║░░░██║░░██║
+        ░╚═══██╗██╔══╝░░██║░░██╗██╔══██╗██╔══╝░░░░░██║░░░██║░░██║
+        ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
+        ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
+        ''')
+        print('V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳')
+        jogar_regras = int(input('<<< Tecle 1 Para Jogar! | Tecle 2 Para Exibir as Regras! >>>\n '))
+            
+        if jogar_regras == 1:
+            break
+        elif jogar_regras == 2:
+            print('''
+            █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
+            █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
+            
+            • Objetivo: 
+                Acertar o número secreto, que é um número entre 1000 e 9999.
+            
+            • Tentativas: 
+                Você tem 10 tentativas para adivinhar o número secreto.
+            
+            • Validação: 
+                Se você inserir um valor inválido (como uma letras, espaços ou não digitar um número entre 1000 a 9999), será solicitado que tente novamente.
+                A partir da terceira vez que um valor inválido for digitado, o jogo começará a descontar tentativas.
+            
+            • Chutes: 
+                Após passar da validação, o sistema irá informar:
+                - Se você acertou algum dígito (e quais foram).
+                - Se não acertou nenhum.
+                Todos os dígitos descobertos ficarão salvos e serão mostrados durante todo o jogo.
+            
+            • Dicas:
+                A partir da 5ª tentativa, você recebe dicas sobre os dígitos:
+                - Primeira Dica => Ínforma se o dígito secreto é par ou ímpar.
+                - Segunda Dica => Ínforma se o dígito secreto é maior ou menor que o seu chute.
+                A segunda dica só é ínformada caso o usuário não tenha acertado o dígito secreto após a primeira dica (Par ou ímpar)
+
+            • Fim do Jogo:
+                O jogo termina se:
+                - Você acertar o número secreto.
+                - Você fazer 10 tentativas sem acertar.
+            
+            • Reiniciar:
+                Após o fim de uma rodada, você pode escolher continuar ou sair.
+
+                ''')
+            input('<<< Tecle enter para retornar >>>')
+        else:
+            print('<<< digite somente 1 ou 2 >>>')
 
     numero_secreto = random.randint(1000, 9999)
 
@@ -95,7 +138,27 @@ while condicao_continuar_parar != 1:
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                    
+                
+            if a == x:
+                primeiro_digito = x
+            else:
+                primeiro_digito = '_'
+            
+            if b == y:
+                segundo_digito = y
+            else:
+                segundo_digito = '_'
+
+            if c == z:
+                terceiro_digito = z
+            else:
+                terceiro_digito = '_'
+
+            if d == w:
+                quarto_digito = w
+            else:
+                quarto_digito = '_'
+
             if chute == numero_secreto:
                 print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
                 print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
@@ -179,7 +242,7 @@ while condicao_continuar_parar != 1:
                     dica_par_impar -= 1
                     dica_maior_menor += 1
                     
-            print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+            print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
             cont += 1
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
