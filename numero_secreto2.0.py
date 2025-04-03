@@ -1,7 +1,7 @@
 #Jogo do número secreto
 import random
-condicao_jogar_novamente_ou_parar = 0
-while condicao_jogar_novamente_ou_parar != 1:
+condicao_jogar_novamente_ou_parar = '0'
+while condicao_jogar_novamente_ou_parar != '1':
     print('''
     ░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ███╗░░██╗██╗░░░██╗███╗░░░███╗███████╗██████╗░░█████╗░
     ░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ████╗░██║██║░░░██║████╗░████║██╔════╝██╔══██╗██╔══██╗
@@ -29,39 +29,39 @@ while condicao_jogar_novamente_ou_parar != 1:
             break
         elif jogar_regras == '2':
             print('''
-                    █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
-                    █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
-                  
-                    • Objetivo: 
-                      Acertar o número secreto, que é um número entre 1000 e 9999.
-                  
-                    • Tentativas: 
-                      Você tem 10 tentativas para adivinhar o número secreto.
-                  
-                    • Validação: 
-                      Se você inserir um valor inválido (como uma letra, deixar um espaço vazio ou não digitar um número entre 1000 a 9999), será solicitado que tente novamente.
-                      A partir da terceira vez que um valor inválido for digitado, o jogo começará a descontar tentativas.
-                  
-                    • Chutes: 
-                      Após passar da validação, o sistema irá informar:
-                        - Se você acertou algum dígito (e quais foram).
-                        - Se não acertou nenhum.
-                      Todos os dígitos descobertos ficarão salvos e serão mostrados durante todo o jogo.
-                  
-                    • Dicas:
-                      A partir da 5ª tentativa, você recebe dicas sobre os dígitos:
-                        - Primeira Dica => Ínforma se o dígito secreto é par ou ímpar.
-                        - Segunda Dica => Ínforma se o dígito secreto é maior ou menor que o seu chute.
-                      A segunda dica só é ínformada caso o usuário não tenha acertado o dígito secreto após a primeira dica (Par ou ímpar)
+            █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
+            █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
+            
+            • Objetivo: 
+                Acertar o número secreto, que é um número entre 1000 e 9999.
+            
+            • Tentativas: 
+                Você tem 10 tentativas para adivinhar o número secreto.
+            
+            • Validação: 
+                Se você inserir um valor inválido (como uma letras, espaços ou não digitar um número entre 1000 a 9999), será solicitado que tente novamente.
+                A partir da terceira vez que um valor inválido for digitado, o jogo começará a descontar tentativas.
+            
+            • Chutes: 
+                Após passar da validação, o sistema irá informar:
+                - Se você acertou algum dígito (e quais foram).
+                - Se não acertou nenhum.
+                Todos os dígitos descobertos ficarão salvos e serão mostrados durante todo o jogo.
+            
+            • Dicas:
+                A partir da 5ª tentativa, você recebe dicas sobre os dígitos:
+                - Primeira Dica => Ínforma se o dígito secreto é par ou ímpar.
+                - Segunda Dica => Ínforma se o dígito secreto é maior ou menor que o seu chute.
+                A segunda dica só é ínformada caso o usuário não tenha acertado o dígito secreto após a primeira dica (Par ou ímpar)
 
-                    • Fim do Jogo:
-                      O jogo termina se:
-                        - Você acertar o número secreto.
-                        - Você fazer 10 tentativas sem acertar.
-                  
-                    • Reiniciar:
-                      Após o fim de uma rodada, você pode escolher continuar ou sair.
-    
+            • Fim do Jogo:
+                O jogo termina se:
+                - Você acertar o número secreto.
+                - Você fazer 10 tentativas sem acertar.
+            
+            • Reiniciar:
+                Após o fim de uma rodada, você pode escolher continuar ou sair.
+
                 ''')
             input('<<< Tecle enter para retornar >>>')
         else:
@@ -125,10 +125,10 @@ while condicao_jogar_novamente_ou_parar != 1:
                         break
 
             if tentativas == 10:
-                print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
-                cont = 10
                 break 
-
+        if tentativas == 10:
+                print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
+                break
         if tentativas < 10:
             a = (chute // 1000)
             b = (chute // 100 - (chute // 100 - (chute % 1000))) // 100
@@ -252,10 +252,16 @@ while condicao_jogar_novamente_ou_parar != 1:
             print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
             cont += 1
 
-    jogar_novamente_ou_parar = int(input('\nDeseja jogar novamente? 1 = SIM || 0 = NÃO: '))
-    if jogar_novamente_ou_parar == 1:
-        condicao_jogar_novamente_ou_parar = 0 
-    else: 
-        condicao_jogar_novamente_ou_parar = 1
+    while True: 
+        jogar_novamente_ou_parar = (input('\nDeseja jogar novamente? 1 = SIM || 0 = NÃO: '))
+        if jogar_novamente_ou_parar == '1':
+            condicao_jogar_novamente_ou_parar = '0' 
+            break
+        elif jogar_novamente_ou_parar == '0': 
+            condicao_jogar_novamente_ou_parar = '1'
+            print('Finalizando app...')
+            break
+        if jogar_novamente_ou_parar != '1' or jogar_novamente_ou_parar != '0' or jogar_novamente_ou_parar == '':
+            print('Entrada inválida!')
     
-    
+            

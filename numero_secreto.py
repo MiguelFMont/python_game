@@ -56,7 +56,7 @@ while condicao_continuar_parar != 1:
                 print('Entrada inválida. Digite apenas números.')                
             else:
                 for digitos in chute:
-                     if digitos < '0' or digitos > '9':
+                    if digitos < '0' or digitos > '9':
                         print('Entrada inválida. Digite apenas números.')
                         break
                 else:
