@@ -48,20 +48,7 @@ while condicao_continuar_parar != 1:
     
     while cont < 10:
 
-        while validacao_de_entrada == 0:
-
-            chute = (input(f'\nDigite seu chute: '))
-
-            if chute == '':
-                print('Entrada inválida. Digite apenas números.')                
-            else:
-                for digitos in chute:
-                    if digitos < '0' or digitos > '9':
-                        print('Entrada inválida. Digite apenas números.')
-                        break
-                else:
-                    chute = int(chute)
-                    break
+        chute = int(input(f'\nDigite seu chute: '))
             
         if chute < 1000: 
             print('Número inválido! Digite somente números entre 1000 a 9999')

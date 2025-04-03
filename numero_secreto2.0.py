@@ -263,5 +263,3 @@ while condicao_jogar_novamente_ou_parar != '1':
             break
         if jogar_novamente_ou_parar != '1' or jogar_novamente_ou_parar != '0' or jogar_novamente_ou_parar == '':
             print('Entrada inválida!')
-    
-            
