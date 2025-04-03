@@ -1,7 +1,7 @@
 #Jogo do número secreto
 import random
-x = 0
-while x != 1:
+condicao_continuar_parar = 0
+while condicao_continuar_parar != 1:
     print('''
     ░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ███╗░░██╗██╗░░░██╗███╗░░░███╗███████╗██████╗░░█████╗░
     ░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ████╗░██║██║░░░██║████╗░████║██╔════╝██╔══██╗██╔══██╗
@@ -17,12 +17,40 @@ while x != 1:
     ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
     ''')
-    print('''
-    V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳
-    A̳  p̳a̳r̳t̳i̳r̳  d̳a̳  5̳º̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳  o̳  j̳o̳g̳o̳  i̳r̳á̳  t̳e̳  a̳j̳u̳d̳a̳r̳,̳  d̳a̳n̳d̳o̳  d̳i̳c̳a̳s̳!̳
-    ''')
-    input('<<< Tecle Algo Para Continuar! >>>')
+    print('V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳')
 
+    iniciar = 0
+
+    while iniciar == 0:
+
+        jogar_regras = (input('<<< Tecle 1 Para Jogar! | Tecle 2 Para Exibir as Regras! >>>\n '))
+        
+        if jogar_regras == '1':
+            break
+        elif jogar_regras == '2':
+            print('''
+                    █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
+                    █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
+                    1. *Objetivo*: Acertar o número secreto, que é um número de 4 dígitos entre 1000 e 9999.
+                    2. *Tentativas*: Você tem 10 tentativas para adivinhar o número secreto.
+                    3. *Chutes*: Cada vez que você tentar um número, ele será verificado.
+                    - Se você acertar algum dígito, será informado.
+                    - Caso contrário, você receberá uma mensagem dizendo quantos dígitos você acertou.
+                    4. *Dicas*:
+                    - A partir da 5ª tentativa, você recebe dicas sobre os dígitos:
+                    - *Maior ou Menor*: Dica sobre se o dígito correto é maior ou menor que o seu chute.
+                    - *Par ou Ímpar*: Indicação se o dígito é par ou ímpar.
+                    5. *Validação*: Se você inserir um valor inválido (como uma letra ou número fora da faixa), será solicitado a tentar novamente.
+                    6. *Fim do Jogo*: O jogo termina quando:
+                    - Você acerta o número secreto.
+                    - Você faz 10 tentativas sem acertar.
+                    7. *Reiniciar*: Após o fim de uma rodada, você pode escolher continuar ou sair.
+                ''')
+            input('<<< Tecle enter para retornar >>>')
+        else:
+            if jogar_regras != '1' or jogar_regras != '2' or jogar_regras == '':
+                print('<<< Digite somente 1 ou 2! >>>')
+            
     numero_secreto = random.randint(1000, 9999)
 
     x = (numero_secreto // 1000)
@@ -41,19 +69,50 @@ while x != 1:
     dica_par_impar = 1
     dica_maior_menor = 0
     digitos_certos = 0
-    digitos_errados = 0
 
-    while tentativas < 10:
-        
-        chute = int(input(f'\nDigite seu chute: '))
+    validacao_de_entrada = 0
+    cont_validacao_errada = 0
+    cont = 0
 
-        if chute < 1000: 
-            print('Número inválido! Digite somente números entre 1000 a 9999')
+    while cont < 10:
 
-        elif chute > 9999:
-            print('número inválido! Digite somente números entre 1000 a 9999')
+        while validacao_de_entrada == 0:
 
-        else:
+            chute = (input(f'\nDigite seu chute: '))
+
+            if chute == '':
+                print('Entrada inválida. Digite apenas números.')
+                cont_validacao_errada += 1
+                if cont_validacao_errada >= 3:
+                    tentativas += 1
+                    print(f'Faltam {10-tentativas} tentativa(s)...')
+            else:
+                for digitos in chute:
+                    if digitos < '0' or digitos > '9':
+                        print('Entrada inválida. Digite apenas números.')
+                        cont_validacao_errada += 1
+                        if cont_validacao_errada >= 3:
+                            tentativas += 1
+                            print(f'Faltam {10-tentativas} tentativa(s)...')
+                        break
+                else:
+                    chute = int(chute)
+                    if chute < 1000 or chute > 9999:
+                        print('número inválido! Digite somente números entre 1000 a 9999')
+                        cont_validacao_errada += 1
+                        if cont_validacao_errada >= 3:
+                            tentativas += 1
+                            print(f'Faltam {10-tentativas} tentativa(s)...')
+                    else:
+                        tentativas += 1
+                        break
+
+            if tentativas == 10:
+                print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
+                cont = 10
+                break 
+
+        if tentativas < 10:
             a = (chute // 1000)
             b = (chute // 100 - (chute // 100 - (chute % 1000))) // 100
             c = (chute // 10) % 10
@@ -66,7 +125,7 @@ while x != 1:
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                    
+                        
             if segundo_digito != y:
                 if b == y:
                     segundo_digito = y
@@ -90,21 +149,20 @@ while x != 1:
                     dica_maior_menor = 0
                     dica_par_impar = 1
                     digitos_certos = 1
-                    
-            if chute == numero_secreto:
-                print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
-                print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
-                break
-            
-            if tentativas == 10:
-                print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
-                break
+
+            if primeiro_digito == x:
+                if segundo_digito == y:
+                    if terceiro_digito == z:
+                        if quarto_digito == w:
+                            print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
+                            print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+                            break
 
             if digitos_certos == 0:
                 print('\nVocê não acertou nenhum dígito dessa vez...')
 
             digitos_certos = 0
-            print(f'\nfaltam {9-tentativas} tentativas...') 
+            print(f'\nfaltam {10-tentativas} tentativa(s)...') 
 
             if tentativas >= 5:
                 print(f'\nVou te dar uma dica!!')
@@ -114,91 +172,73 @@ while x != 1:
                                 print(f'==> O primeiro dígito é menor que {a}')
                                 primeiro_digito = f'<{a}'
                         else: 
-                                print(f'==> O primeiro dígito é maior que {a}')
-                                primeiro_digito = f'>{a}'
+                            print(f'==> O primeiro dígito é maior que {a}')
+                            primeiro_digito = f'>{a}'
                     elif segundo_digito != y:
                         if b > y:
                                 print(f'==> O segundo dígito é menor que {b}')
                                 segundo_digito = f'<{b}'
                         else:
-                                print(f'==> O segundo dígito é maior que {b}')
-                                segundo_digito = f'>{b}'
+                            print(f'==> O segundo dígito é maior que {b}')
+                            segundo_digito = f'>{b}'
                     elif terceiro_digito != z:           
                         if c > z:
                                 print(f'==> O terceiro dígito é menor que {c}')
                                 terceiro_digito = f'<{c}'
                         else:
-                                print(f'==> O terceiro dígito é maior que {c}')
-                                terceiro_digito = f'>{c}'
+                            print(f'==> O terceiro dígito é maior que {c}')
+                            terceiro_digito = f'>{c}'
                     elif quarto_digito != w:           
                         if d > w:
                                 print(f'==> O quarto dígito é menor que {d}')
                                 quarto_digito = f'<{d}'
                         else:
-                                print(f'==> O quarto dígito é maior que {d}')
-                                quarto_digito = f'>{d}'
-                    
+                            print(f'==> O quarto dígito é maior que {d}')
+                            quarto_digito = f'>{d}'
+                        
                 if dica_par_impar == 1:
-                    if a != x:
+                    if primeiro_digito != x:
                         if x % 2 == 0:
                             print(f'==> O primeiro dígito é par!')
                             primeiro_digito = 'PAR'
                         else:
                             print(f'==> O primeiro dígito é ímpar!')
                             primeiro_digito = 'ÍMPAR'
-                    elif b!= y:
+
+                    elif segundo_digito != y:
                         if y % 2 == 0:
-                            if y == 0:
-                                if b > y:
-                                    print(f'==> O segundo dígito é menor que {a}')
-                                    segundo_digito = f'<{a}'
-                                else: 
-                                    print(f'==> O segundo dígito é maior que {a}')
-                                    segundo_digito = f'>{a}'
-                            else:
                                 print(f'==> O segundo dígito é par!')
                                 segundo_digito = 'PAR'
                         else:
                             print(f'==> O segundo dígito é ímpar!')
                             segundo_digito = 'ÍMPAR'
-                    elif c != z:
+
+                    elif terceiro_digito != z:
                         if z % 2 == 0:
-                            if z == 0:
-                                if c > z:
-                                    print(f'==> O terceiro dígito é menor que {c}')
-                                    terceiro_digito = f'<{c}'
-                                else:
-                                    print(f'==> O terceiro dígito é maior que {c}')
-                                    terceiro_digito = f'>{c}'
-                            else:
                                 print(f'==> O terceiro dígito é par!')
                                 terceiro_digito = 'PAR'
                         else:
                             print(f'==> O terceiro dígito é ímpar!')
                             terceiro_digito = 'ÍMPAR'
-                    elif d != w:
+
+                    elif quarto_digito != w:
                         if w % 2 == 0:
-                            if w == 0:
-                                if d > w:
-                                    print(f'==> O quarto dígito é menor que {d}')
-                                    quarto_digito = f'<{d}'
-                                else:
-                                    print(f'==> O quarto dígito é maior que {d}')
-                                    quarto_digito = f'>{d}'
-                            else:
                                 print(f'==> O quarto dígito é par!')
                                 quarto_digito = 'PAR'
                         else:
                             print(f'==> O quarto dígito é ímpar!')
                             quarto_digito = 'ÍMPAR'
+                                
                     dica_par_impar -= 1
                     dica_maior_menor += 1
-                    
-            tentativas += 1
-            print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}') 
+                        
+            print(f'\nSeu código é: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+            cont += 1
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))
     if continuar_parar == 1:
-        x = 0
+        condicao_continuar_parar = 0 
     else: 
-        x = 1
+        condicao_continuar_parar = 1
+    
+    
