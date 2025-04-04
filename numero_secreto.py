@@ -15,21 +15,25 @@ while condicao_continuar_parar != 1:
         ╚█████╔╝╚█████╔╝╚██████╔╝╚█████╔╝  ██████╔╝╚█████╔╝  ██║░╚███║╚██████╔╝██║░╚═╝░██║███████╗██║░░██║╚█████╔╝
         ░╚════╝░░╚════╝░░╚═════╝░░╚════╝░  ╚═════╝░░╚════╝░  ╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░
 
-        ░██████╗███████╗░█████╗░██████╗░███████╗████████╗░█████╗░
-        ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
-        ╚█████╗░█████╗░░██║░░╚═╝██████╔╝█████╗░░░░░██║░░░██║░░██║
-        ░╚═══██╗██╔══╝░░██║░░██╗██╔══██╗██╔══╝░░░░░██║░░░██║░░██║
-        ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
-        ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
+                            ░██████╗███████╗░█████╗░██████╗░███████╗████████╗░█████╗░
+                            ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
+                            ╚█████╗░█████╗░░██║░░╚═╝██████╔╝█████╗░░░░░██║░░░██║░░██║
+                            ░╚═══██╗██╔══╝░░██║░░██╗██╔══██╗██╔══╝░░░░░██║░░░██║░░██║
+                            ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
+                            ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
         ''')
         print('V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳')
-        jogar_regras = int(input('<<< Tecle 1 Para Jogar! | Tecle 2 Para Exibir as Regras! >>>\n '))
+        jogar_regras = int(input('''                 
+                      ▄█       █ █▀█ █▀▀ ▄▀█ █▀█   █   ▀█     █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀ 
+                       █ ▄   █▄█ █▄█ █▄█ █▀█ █▀▄   █   █▄ ▄   █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█ 
+                                                   
+                                                => '''))
             
         if jogar_regras == 1:
             break
         elif jogar_regras == 2:
             print('''
-            █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
+            █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█     █ █▀█ █▀▀ █▀█ ▀
             █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
             
             • Objetivo: 
@@ -63,9 +67,17 @@ while condicao_continuar_parar != 1:
                 Após o fim de uma rodada, você pode escolher continuar ou sair.
 
                 ''')
-            input('<<< Tecle enter para retornar >>>')
+            input('''                                                                        
+                                                                                             ▀▀█  
+                  █▀▀ █▄ █ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄ █ ▀█▀ █ █▄ █ █ █ ▄▀█ █▀█   
+                  ██▄ █ ▀█  █  ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █ ▀█  █  █ █ ▀█ █▄█ █▀█ █▀▄
+                █▄▄
+                      ''')
         else:
-            print('<<< digite somente 1 ou 2 >>>')
+            print('''
+                     █▀▄ █ █▀▀ █ ▀█▀ █▀▀   █▀ █▀█ █▀▄▀█ █▀▀ █▄ █ ▀█▀ █▀▀   ▄█   █▀█ █ █   ▀█ █  
+                     █▄▀ █ █▄█ █  █  ██▄   ▄█ █▄█ █ ▀ █ ██▄ █ ▀█  █  ██▄    █   █▄█ █▄█   █▄ ▄ 
+                      ''')
 
     numero_secreto = random.randint(1000, 9999)
 
@@ -94,20 +106,43 @@ while condicao_continuar_parar != 1:
     cont_entradas_erradas = 0
 
     cont = 0
+
+    print('''      
+    █▀▀ █▀ █▀▀ █▀█ █   █ █ ▄▀█   █▀ ▄▀█ █▄▄ █ ▄▀█ █▀▄▀█ █▀▀ █▄ █ ▀█▀ █▀▀
+    ██▄ ▄█ █▄▄ █▄█ █▄▄ █▀█ █▀█   ▄█ █▀█ █▄█ █ █▀█ █ ▀ █ ██▄ █ ▀█  █  ██▄ ▄ ▄ ▄
+        ''')
     
     while cont < 10:
-        print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+        print(f'''
+══════════════════════════════════
+ Digitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
+══════════════════════════════════''')
         chute = int(input(f'\nDigite seu chute: '))
             
         if chute < 1000 or chute > 9999:
             os.system('cls')
-            print('Número inválido! Digite somente números entre 1000 a 9999')
-            input('<<< Tecle enter para continuar >>>')
+            print('''
+                                                █▀▀ █▀█ █▀█ █▀█ █ █
+                                                ██▄ █▀▄ █▀▄ █▄█ ▄ ▄
+                  ''')
+            print('''
+            █▄ █ █ █ █▀▄▀█ █▀▀ █▀█ █▀█ █▀   █▀▀ █▀█ █▀█ ▄▀█   █▀▄ █▀█   █ █▄ █ ▀█▀ █▀▀ █▀█ █ █ ▄▀█ █   █▀█ █
+            █ ▀█ █▄█ █ ▀ █ ██▄ █▀▄ █▄█ ▄█   █▀  █▄█ █▀▄ █▀█   █▄▀ █▄█   █ █ ▀█  █  ██▄ █▀▄ ▀▄▀ █▀█ █▄▄ █▄█ ▄
+            ''')
+            input('''                                                                        
+                                                                                                 ▀▀█  
+                      █▀▀ █▄ █ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄ █ ▀█▀ █ █▄ █ █ █ ▄▀█ █▀█   
+                      ██▄ █ ▀█  █  ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █ ▀█  █  █ █ ▀█ █▄█ █▀█ █▀▄
+                    █▄▄
+                        ''')
             os.system('cls')
             cont_entradas_erradas += 1
             if cont_entradas_erradas >= 3:
                 tentativas += 1
-                print(f'\nfaltam {10-tentativas} tentativas...') 
+                print(f'''
+═══════════════════════════
+ Tentativas restantes:  {10-tentativas}
+═══════════════════════════''')
                 if tentativas == 10:
                     print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
                     break
@@ -256,7 +291,13 @@ while condicao_continuar_parar != 1:
                     dica_maior_menor += 1
                     
             print(f'\nSeus dígitos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
-            input('<<< Tecle enter para continuar >>>')
+            input('''\n                                                                                                     ▀▀█ 
+            ▀█▀ █▀▀ █▀▀ █   █▀▀   █▀▀ █▄ █ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀█ █▀█ █▀█ ▀▄▀ █ █▀▄▀█ ▄▀█
+             █  ██▄ █▄▄ █▄▄ ██▄   ██▄ █ ▀█  █  ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▀▀ █▀▄ █▄█ █ █ █ █ ▀ █ █▀█
+
+            ▀█▀ █▀▀ █▄ █ ▀█▀ ▄▀█ ▀█▀ █ █ █ ▄▀█
+             █  ██▄ █ ▀█  █  █▀█  █  █ ▀▄▀ █▀█ 
+          █▄▄        \n''')
             os.system('cls')
             cont += 1
 
@@ -265,5 +306,8 @@ while condicao_continuar_parar != 1:
         condicao_continuar_parar = 0
     else: 
         os.system('cls')
-        print('Finalizando app...')
+        print('''
+█▀▀ █ █▄ █ ▄▀█ █   █ ▀█ ▄▀█ █▄ █ █▀▄ █▀█   ▄▀█ █▀█ █▀█ 
+█▀  █ █ ▀█ █▀█ █▄▄ █ █▄ █▀█ █ ▀█ █▄▀ █▄█   █▀█ █▀▀ █▀▀ ▄ ▄ ▄
+''')
         condicao_continuar_parar = 1

@@ -241,4 +241,8 @@ while condicao_continuar_parar != 1:
     else: 
         condicao_continuar_parar = 1
     
+
+    print('''
+            ═ ╝╔ ╚ ╗ ░░░ ═
+''')
     

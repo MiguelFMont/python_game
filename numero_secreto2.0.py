@@ -9,65 +9,71 @@ while condicao_jogar_novamente_ou_parar != '1':
 
     while iniciar == 0:
         print('''
-        ░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ███╗░░██╗██╗░░░██╗███╗░░░███╗███████╗██████╗░░█████╗░
-        ░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ████╗░██║██║░░░██║████╗░████║██╔════╝██╔══██╗██╔══██╗
-        ░░░░░██║██║░░██║██║░░██╗░██║░░██║  ██║░░██║██║░░██║  ██╔██╗██║██║░░░██║██╔████╔██║█████╗░░██████╔╝██║░░██║
-        ██╗░░██║██║░░██║██║░░╚██╗██║░░██║  ██║░░██║██║░░██║  ██║╚████║██║░░░██║██║╚██╔╝██║██╔══╝░░██╔══██╗██║░░██║
-        ╚█████╔╝╚█████╔╝╚██████╔╝╚█████╔╝  ██████╔╝╚█████╔╝  ██║░╚███║╚██████╔╝██║░╚═╝░██║███████╗██║░░██║╚█████╔╝
-        ░╚════╝░░╚════╝░░╚═════╝░░╚════╝░  ╚═════╝░░╚════╝░  ╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░
+            ░░░░░██╗░█████╗░░██████╗░░█████╗░  ██████╗░░█████╗░  ███╗░░██╗██╗░░░██╗███╗░░░███╗███████╗██████╗░░█████╗░
+            ░░░░░██║██╔══██╗██╔════╝░██╔══██╗  ██╔══██╗██╔══██╗  ████╗░██║██║░░░██║████╗░████║██╔════╝██╔══██╗██╔══██╗
+            ░░░░░██║██║░░██║██║░░██╗░██║░░██║  ██║░░██║██║░░██║  ██╔██╗██║██║░░░██║██╔████╔██║█████╗░░██████╔╝██║░░██║
+            ██╗░░██║██║░░██║██║░░╚██╗██║░░██║  ██║░░██║██║░░██║  ██║╚████║██║░░░██║██║╚██╔╝██║██╔══╝░░██╔══██╗██║░░██║
+            ╚█████╔╝╚█████╔╝╚██████╔╝╚█████╔╝  ██████╔╝╚█████╔╝  ██║░╚███║╚██████╔╝██║░╚═╝░██║███████╗██║░░██║╚█████╔╝
+            ░╚════╝░░╚════╝░░╚═════╝░░╚════╝░  ╚═════╝░░╚════╝░  ╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░
 
-        ░██████╗███████╗░█████╗░██████╗░███████╗████████╗░█████╗░
-        ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
-        ╚█████╗░█████╗░░██║░░╚═╝██████╔╝█████╗░░░░░██║░░░██║░░██║
-        ░╚═══██╗██╔══╝░░██║░░██╗██╔══██╗██╔══╝░░░░░██║░░░██║░░██║
-        ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
-        ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
+                                    ░██████╗███████╗░█████╗░██████╗░███████╗████████╗░█████╗░
+                                    ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
+                                    ╚█████╗░█████╗░░██║░░╚═╝██████╔╝█████╗░░░░░██║░░░██║░░██║
+                                    ░╚═══██╗██╔══╝░░██║░░██╗██╔══██╗██╔══╝░░░░░██║░░░██║░░██║
+                                    ██████╔╝███████╗╚█████╔╝██║░░██║███████╗░░░██║░░░╚█████╔╝
+                                    ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░░╚════╝
         ''')
-        print('V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳')
-        jogar_regras = (input('<<< Tecle 1 Para Jogar! | Tecle 2 Para Exibir as Regras! >>>\n '))
+        print('''
+                    V̳o̳c̳ê̳  t̳e̳m̳  1̳0̳  t̳e̳n̳t̳a̳t̳i̳v̳a̳s̳  p̳a̳r̳a̳  a̳c̳e̳r̳t̳a̳r̳  o̳  n̳ú̳m̳e̳r̳o  s̳e̳c̳r̳e̳t̳o̳  e̳n̳t̳r̳e  1̳0̳0̳0̳  e̳  9̳9̳9̳9̳.̳ 
+              ''')
+        jogar_regras = (input('''                  
+                             ▄█     ░░█ █▀█ █▀▀ ▄▀█ █▀█    █   ▀█     █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀ 
+                             ░█ ▄   █▄█ █▄█ █▄█ █▀█ █▀▄    █   █▄ ▄   █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█ 
+                                                   
+                                                        => '''))
         
         if jogar_regras == '1':
             break
         elif jogar_regras == '2':
             print('''
-            █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
-            █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
-            
-            • Objetivo: 
-                Acertar o número secreto, que é um número entre 1000 e 9999.
-            
-            • Tentativas: 
-                Você tem 10 tentativas para adivinhar o número secreto.
-            
-            • Validação: 
-                Se você inserir um valor inválido (como uma letras, espaços ou não digitar um número entre 1000 a 9999), será solicitado que tente novamente.
-                A partir da terceira vez que um valor inválido for digitado, o jogo começará a descontar tentativas.
-            
-            • Chutes: 
-                Após passar da validação, o sistema irá informar:
-                - Se você acertou algum dígito (e quais foram).
-                - Se não acertou nenhum.
-                Todos os dígitos descobertos ficarão salvos e serão mostrados durante todo o jogo.
-            
-            • Dicas:
-                A partir da 5ª tentativa, você recebe dicas sobre os dígitos:
-                - Primeira Dica => Ínforma se o dígito secreto é par ou ímpar.
-                - Segunda Dica => Ínforma se o dígito secreto é maior ou menor que o seu chute.
-                A segunda dica só é ínformada caso o usuário não tenha acertado o dígito secreto após a primeira dica (Par ou ímpar)
+                                    █▀█ █▀▀ █▀▀ █▀█ ▄▀█ █▀   █▀▄ █▀█   ░░█ █▀█ █▀▀ █▀█ ▀
+                                    █▀▄ ██▄ █▄█ █▀▄ █▀█ ▄█   █▄▀ █▄█   █▄█ █▄█ █▄█ █▄█ ▄
+                                    
+                    • Objetivo: 
+                        Acertar o número secreto, que é um número entre 1000 e 9999.
+                    
+                    • Tentativas: 
+                        Você tem 10 tentativas para adivinhar o número secreto.
+                    
+                    • Validação: 
+                        Se você inserir um valor inválido (como uma letras, espaços ou não digitar um número entre 1000 a 9999), será solicitado que tente novamente.
+                        A partir da terceira vez que um valor inválido for digitado, o jogo começará a descontar tentativas.
+                    
+                    • Chutes: 
+                        Após passar da validação, o sistema irá informar:
+                        - Se você acertou algum dígito (e quais foram).
+                        - Se não acertou nenhum.
+                        Todos os dígitos descobertos ficarão salvos e serão mostrados durante todo o jogo.
+                    
+                    • Dicas:
+                        A partir da 5ª tentativa, você recebe dicas sobre os dígitos:
+                        - Primeira Dica => Ínforma se o dígito secreto é par ou ímpar.
+                        - Segunda Dica => Ínforma se o dígito secreto é maior ou menor que o seu chute.
+                        A segunda dica só é ínformada caso o usuário não tenha acertado o dígito secreto após a primeira dica (Par ou ímpar)
 
-            • Fim do Jogo:
-                O jogo termina se:
-                - Você acertar o número secreto.
-                - Você fazer 10 tentativas sem acertar.
-            
-            • Reiniciar:
-                Após o fim de uma rodada, você pode escolher continuar ou sair.
-                ''')
+                    • Fim do Jogo:
+                        O jogo termina se:
+                        - Você acertar o número secreto.
+                        - Você fazer 10 tentativas sem acertar.
+                    
+                    • Reiniciar:
+                        Após o fim de uma rodada, você pode escolher continuar ou sair.
+                                        ''')
             input('''                                                                        
-                                                                                             ▀▀█  
-                  █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                  ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                █▄▄
+                                                                                                     ▀▀█  
+                          █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                          ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                        █▄▄
                       ''')
             os.system('cls')
         else:
@@ -114,28 +120,28 @@ while condicao_jogar_novamente_ou_parar != '1':
     cont = 0
 
     print('''      
-    █▀▀ █▀ █▀▀ █▀█ █░░ █░█ ▄▀█   █▀ ▄▀█ █▄▄ █ ▄▀█ █▀▄▀█ █▀▀ █▄░█ ▀█▀ █▀▀ ░ ░ ░
-    ██▄ ▄█ █▄▄ █▄█ █▄▄ █▀█ █▀█   ▄█ █▀█ █▄█ █ █▀█ █░▀░█ ██▄ █░▀█ ░█░ ██▄ ▄ ▄ ▄
+                            █▀▀ █▀ █▀▀ █▀█ █░░ █░█ ▄▀█   █▀ ▄▀█ █▄▄ █ ▄▀█ █▀▄▀█ █▀▀ █▄░█ ▀█▀ █▀▀ 
+                            ██▄ ▄█ █▄▄ █▄█ █▄▄ █▀█ █▀█   ▄█ █▀█ █▄█ █ █▀█ █░▀░█ ██▄ █░▀█ ░█░ ██▄ ▄ ▄ ▄
         ''')
     while cont < 10:
         
         while validacao_de_entrada == 0:
             time.sleep(0.2)
             print(f'''
-═══════════════════════════
- Tentativas restantes:  {10-tentativas}
-═══════════════════════════''')
+                                                ═══════════════════════════
+                                                Tentativas restantes:  {10-tentativas}
+                                                ═══════════════════════════''')
             time.sleep(0.2)
             print(f'''
-══════════════════════════════════
- Digitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
-══════════════════════════════════''')
+                                            ══════════════════════════════════
+                                            Digitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
+                                            ══════════════════════════════════''')
             time.sleep(0.2)
             chute = (input(f'''
-╔══════════════════╗
-║ Digite seu chute ║
-╚══════════════════╝                               
-    => '''))
+                                                   ╔══════════════════╗
+                                                   ║ Digite seu chute ║
+                                                   ╚══════════════════╝                               
+                                                         => '''))
             if chute == '':
                 os.system('cls')
                 time.sleep(0.2)
@@ -187,18 +193,18 @@ while condicao_jogar_novamente_ou_parar != '1':
                         os.system('cls')
                         time.sleep(0.2)
                         print('''
-                                                █▀▀ █▀█ █▀█ █▀█ █ █
-                                                ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                                                    █▀▀ █▀█ █▀█ █▀█ █ █
+                                                    ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
                         time.sleep(0.2)
                         print('''
-            █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀   █▀▀ █▀█ █▀█ ▄▀█   █▀▄ █▀█   █ █▄░█ ▀█▀ █▀▀ █▀█ █░█ ▄▀█ █░░ █▀█ █
-            █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█   █▀░ █▄█ █▀▄ █▀█   █▄▀ █▄█   █ █░▀█ ░█░ ██▄ █▀▄ ▀▄▀ █▀█ █▄▄ █▄█ ▄''')
+                █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀   █▀▀ █▀█ █▀█ ▄▀█   █▀▄ █▀█   █ █▄░█ ▀█▀ █▀▀ █▀█ █░█ ▄▀█ █░░ █▀█ █
+                █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█   █▀░ █▄█ █▀▄ █▀█   █▄▀ █▄█   █ █░▀█ ░█░ ██▄ █▀▄ ▀▄▀ █▀█ █▄▄ █▄█ ▄''')
                         time.sleep(0.2)
                         input('''                                                                        
-                                                                                                 ▀▀█  
-                      █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                      ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                    █▄▄
+                                                                                                     ▀▀█  
+                          █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                          ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                        █▄▄
                             ''')
                         os.system('cls')
                         cont_validacao_errada += 1
@@ -208,15 +214,20 @@ while condicao_jogar_novamente_ou_parar != '1':
                         tentativas += 1
                         break
             if tentativas == 10:
+                tentativas += 1
                 break                
-        if tentativas > 10:
-                print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
-                break
-        else:
+        if tentativas <= 10:
+
             a = (chute // 1000)
             b = (chute // 100 - (chute // 100 - (chute % 1000))) // 100
             c = (chute // 10) % 10
             d = chute % 10
+            time.sleep(0.2)
+            print('''
+                                        █▀▀ █▀█ █▀▄▀█ █▀█ ▄▀█ █▀█ ▄▀█ █▄ █ █▀▄ █▀█ 
+                                        █▄▄ █▄█ █ ▀ █ █▀▀ █▀█ █▀▄ █▀█ █ ▀█ █▄▀ █▄█ ▄ ▄
+''')        
+            time.sleep(1)
 
             if primeiro_digito != x:
                 if a == x:
@@ -377,23 +388,26 @@ while condicao_jogar_novamente_ou_parar != '1':
             print(f'\nSeus digitos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
             cont += 1
             time.sleep(0.4)
-            input('''\n                                                                                                     ▀▀█ 
-            ▀█▀ █▀▀ █▀▀ █░░ █▀▀   █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀█ █▀█ █▀█ ▀▄▀ █ █▀▄▀█ ▄▀█
-            ░█░ ██▄ █▄▄ █▄▄ ██▄   ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▀▀ █▀▄ █▄█ █░█ █ █░▀░█ █▀█
+            input('''\n                                                                                                             ▀▀█ 
+                    ▀█▀ █▀▀ █▀▀ █░░ █▀▀   █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀█ █▀█ █▀█ ▀▄▀ █ █▀▄▀█ ▄▀█
+                    ░█░ ██▄ █▄▄ █▄▄ ██▄   ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▀▀ █▀▄ █▄█ █░█ █ █░▀░█ █▀█
 
-            ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█
-            ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ 
-          █▄▄        \n''')
+                    ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█
+                    ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ 
+                  █▄▄        \n''')
             os.system('cls')
             time.sleep(0.4)
             print('''
-                ▄▀█ █▀▀ █░█ ▄▀█ █▀█ █▀▄ ▄▀█ █▄░█ █▀▄ █▀█   ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█ ░ ░ ░
-                █▀█ █▄█ █▄█ █▀█ █▀▄ █▄▀ █▀█ █░▀█ █▄▀ █▄█   ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ ▄ ▄ ▄''')
-
+                        ▄▀█ █▀▀ █░█ ▄▀█ █▀█ █▀▄ ▄▀█ █▄░█ █▀▄ █▀█   ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█ ░ ░ ░
+                        █▀█ █▄█ █▄█ █▀█ █▀▄ █▄▀ █▀█ █░▀█ █▄▀ █▄█   ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ ▄ ▄ ▄''')
+        else:
+            print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
+            break
     while True: 
         time.sleep(0.2)
         jogar_novamente_ou_parar = (input('\nDeseja jogar novamente? 1 = SIM || 0 = NÃO: '))
         if jogar_novamente_ou_parar == '1':
+            os.system('cls')
             condicao_jogar_novamente_ou_parar = '0' 
             break
         elif jogar_novamente_ou_parar == '0': 
@@ -401,10 +415,19 @@ while condicao_jogar_novamente_ou_parar != '1':
             os.system('cls')
             time.sleep(0.2)
             print('''
-█▀▀ █ █▄░█ ▄▀█ █░░ █ ▀█ ▄▀█ █▄░█ █▀▄ █▀█   ▄▀█ █▀█ █▀█ ░ ░ ░
-█▀░ █ █░▀█ █▀█ █▄▄ █ █▄ █▀█ █░▀█ █▄▀ █▄█   █▀█ █▀▀ █▀▀ ▄ ▄ ▄
+                            █▀▀ █ █▄░█ ▄▀█ █░░ █ ▀█ ▄▀█ █▄░█ █▀▄ █▀█   ▄▀█ █▀█ █▀█ 
+                            █▀░ █ █░▀█ █▀█ █▄▄ █ █▄ █▀█ █░▀█ █▄▀ █▄█   █▀█ █▀▀ █▀▀ ▄ ▄ ▄
 ''')
             break
         if jogar_novamente_ou_parar != '1' or jogar_novamente_ou_parar != '0' or jogar_novamente_ou_parar == '':
             time.sleep(0.2)
-            print('Entrada inválida!')
+            os.system('cls')
+            print('''
+                                                █▀▀ █▀█ █▀█ █▀█ █ █
+                                                ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+            time.sleep(0.2)
+            print('''
+
+                        █▀▄ █ █▀▀ █ ▀█▀ █▀▀   █▀ █▀█ █▀▄▀█ █▀▀ █▄░█ ▀█▀ █▀▀   ▄█   █▀█ █░█   █▀█ █
+                        █▄▀ █ █▄█ █ ░█░ ██▄   ▄█ █▄█ █░▀░█ ██▄ █░▀█ ░█░ ██▄   ░█   █▄█ █▄█   █▄█ ▄
+''')
