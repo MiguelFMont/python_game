@@ -92,7 +92,7 @@ while condicao_jogar_novamente_ou_parar != '1':
     z = (numero_secreto // 10) % 10
     w = numero_secreto % 10
 
-    # print(numero_secreto)
+    print(numero_secreto)
 
     primeiro_digito = '_'
     segundo_digito = '_'
@@ -121,9 +121,15 @@ while condicao_jogar_novamente_ou_parar != '1':
         
         while validacao_de_entrada == 0:
             time.sleep(0.2)
-            print(f'\nTentativas restantes: {10-tentativas}')
+            print(f'''
+═══════════════════════════
+ Tentativas restantes:  {10-tentativas}
+═══════════════════════════''')
             time.sleep(0.2)
-            print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+            print(f'''
+══════════════════════════════════
+ Digitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
+══════════════════════════════════''')
             time.sleep(0.2)
             chute = (input(f'''
 ╔══════════════════╗
@@ -134,42 +140,46 @@ while condicao_jogar_novamente_ou_parar != '1':
                 os.system('cls')
                 time.sleep(0.2)
                 print('''
-                    █▀▀ █▀█ █▀█ █▀█ █ █
-                    ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
-                print('\nEntrada inválida. Digite apenas números.')
+                                                █▀▀ █▀█ █▀█ █▀█ █ █
+                                                ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                print('''
+                    
+                    █▀▄ █ █▀▀ █ ▀█▀ █▀▀   ▄▀█ █▀█ █▀▀ █▄░█ ▄▀█ █▀   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀ ░
+                    █▄▀ █ █▄█ █ ░█░ ██▄   █▀█ █▀▀ ██▄ █░▀█ █▀█ ▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█ ▄
+''')
                 input('''                                                                        
-                                                                                                   ▀▀█  
-                        █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                        ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                      █▄▄
+                                                                                                 ▀▀█  
+                      █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                      ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                    █▄▄
                             ''')
                 os.system('cls')
                 cont_validacao_errada += 1
                 if cont_validacao_errada >= 3:
                     tentativas += 1
-                    time.sleep(0.2)
-                    print(f'Faltam {10-tentativas} tentativa(s)...')
             else:
                 for digitos in chute:
                     if digitos < '0' or digitos > '9':
                         os.system('cls')
                         time.sleep(0.2)
                         print('''
-                            █▀▀ █▀█ █▀█ █▀█ █ █
-                            ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
-                        print('Entrada inválida. Digite apenas números.')
+                                                █▀▀ █▀█ █▀█ █▀█ █ █
+                                                ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                        print('''
+                    
+                    █▀▄ █ █▀▀ █ ▀█▀ █▀▀   ▄▀█ █▀█ █▀▀ █▄░█ ▄▀█ █▀   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀ ░
+                    █▄▀ █ █▄█ █ ░█░ ██▄   █▀█ █▀▀ ██▄ █░▀█ █▀█ ▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█ ▄
+                        ''')
                         input('''                                                                        
-                                                                                                   ▀▀█  
-                        █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                        ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                      █▄▄
+                                                                                                 ▀▀█  
+                      █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                      ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                    █▄▄
                             ''')
                         os.system('cls')
                         cont_validacao_errada += 1
                         if cont_validacao_errada >= 3:
                             tentativas += 1
-                            time.sleep(0.2)
-                            print(f'Faltam {10-tentativas} tentativa(s)...')
                         break
                 else:
                     chute = int(chute)
@@ -177,28 +187,29 @@ while condicao_jogar_novamente_ou_parar != '1':
                         os.system('cls')
                         time.sleep(0.2)
                         print('''
-                            █▀▀ █▀█ █▀█ █▀█ █ █
-                            ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
-                        print('número inválido! Digite somente números entre 1000 a 9999')
+                                                █▀▀ █▀█ █▀█ █▀█ █ █
+                                                ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                        time.sleep(0.2)
+                        print('''
+            █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀   █▀▀ █▀█ █▀█ ▄▀█   █▀▄ █▀█   █ █▄░█ ▀█▀ █▀▀ █▀█ █░█ ▄▀█ █░░ █▀█ █
+            █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█   █▀░ █▄█ █▀▄ █▀█   █▄▀ █▄█   █ █░▀█ ░█░ ██▄ █▀▄ ▀▄▀ █▀█ █▄▄ █▄█ ▄''')
+                        time.sleep(0.2)
                         input('''                                                                        
-                                                                                                   ▀▀█  
-                        █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                        ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                      █▄▄
+                                                                                                 ▀▀█  
+                      █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                      ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                    █▄▄
                             ''')
                         os.system('cls')
                         cont_validacao_errada += 1
                         if cont_validacao_errada >= 3:
                             tentativas += 1
-                            time.sleep(0.2)
-                            print(f'Faltam {10-tentativas} tentativa(s)...')
                     else:
                         tentativas += 1
                         break
-
             if tentativas == 10:
-                break 
-        if tentativas == 10:
+                break                
+        if tentativas > 10:
                 print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
                 break
         else:
@@ -389,7 +400,10 @@ while condicao_jogar_novamente_ou_parar != '1':
             condicao_jogar_novamente_ou_parar = '1'
             os.system('cls')
             time.sleep(0.2)
-            print('Finalizando app...')
+            print('''
+█▀▀ █ █▄░█ ▄▀█ █░░ █ ▀█ ▄▀█ █▄░█ █▀▄ █▀█   ▄▀█ █▀█ █▀█ ░ ░ ░
+█▀░ █ █░▀█ █▀█ █▄▄ █ █▄ █▀█ █░▀█ █▄▀ █▄█   █▀█ █▀▀ █▀▀ ▄ ▄ ▄
+''')
             break
         if jogar_novamente_ou_parar != '1' or jogar_novamente_ou_parar != '0' or jogar_novamente_ou_parar == '':
             time.sleep(0.2)
