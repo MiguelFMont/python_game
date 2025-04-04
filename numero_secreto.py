@@ -91,7 +91,7 @@ while condicao_continuar_parar != 1:
     dica_maior_menor = 0
     digitos_certos = 0
 
-    validacao_de_entrada = 0
+    cont_entradas_erradas = 0
 
     cont = 0
     
@@ -99,12 +99,19 @@ while condicao_continuar_parar != 1:
         print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
         chute = int(input(f'\nDigite seu chute: '))
             
-        if chute < 1000: 
+        if chute < 1000 or chute > 9999:
+            os.system('cls')
             print('Número inválido! Digite somente números entre 1000 a 9999')
-            
-        elif chute > 9999:
-            print('número inválido! Digite somente números entre 1000 a 9999')
-            
+            input('<<< Tecle enter para continuar >>>')
+            os.system('cls')
+            cont_entradas_erradas += 1
+            if cont_entradas_erradas >= 3:
+                tentativas += 1
+                print(f'\nfaltam {10-tentativas} tentativas...') 
+                if tentativas == 10:
+                    print(f'Você não conseguiu acertar!!\nO número secreto era: {numero_secreto}')
+                    break
+                      
         else:
             tentativas += 1
 
@@ -257,4 +264,6 @@ while condicao_continuar_parar != 1:
     if continuar_parar == 1:
         condicao_continuar_parar = 0
     else: 
+        os.system('cls')
+        print('Finalizando app...')
         condicao_continuar_parar = 1
