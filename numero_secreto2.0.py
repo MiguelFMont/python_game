@@ -308,7 +308,7 @@ while condicao_jogar_novamente_ou_parar != '1':
                     dica_par_impar -= 1
                     dica_maior_menor += 1
             time.sleep(0.2)
-            print(f'\nSeu dígito é: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
+            print(f'\nSeus digitos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
             cont += 1
             time.sleep(0.4)
             input('\n<<< Tecle enter para próxima tentativa >>>')

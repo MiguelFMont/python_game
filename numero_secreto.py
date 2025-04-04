@@ -248,7 +248,7 @@ while condicao_continuar_parar != 1:
                     dica_par_impar -= 1
                     dica_maior_menor += 1
                     
-            print(f'\nSeu dígito é: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
+            print(f'\nSeus dígitos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
             input('<<< Tecle enter para continuar >>>')
             os.system('cls')
             cont += 1
