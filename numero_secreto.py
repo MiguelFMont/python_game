@@ -1,5 +1,6 @@
 #Jogo do número secreto
 import random
+import os
 condicao_continuar_parar = 0
 while condicao_continuar_parar != 1:
 
@@ -80,6 +81,11 @@ while condicao_continuar_parar != 1:
     terceiro_digito = '_'
     quarto_digito = '_'
 
+    primeiro_digito_input = '_'
+    segundo_digito_input = '_'
+    terceiro_digito_input = '_'
+    quarto_digito_input = '_'
+
     tentativas = 0
     dica_par_impar = 1
     dica_maior_menor = 0
@@ -90,7 +96,7 @@ while condicao_continuar_parar != 1:
     cont = 0
     
     while cont < 10:
-
+        print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
         chute = int(input(f'\nDigite seu chute: '))
             
         if chute < 1000: 
@@ -140,24 +146,24 @@ while condicao_continuar_parar != 1:
                     digitos_certos = 1
                 
             if a == x:
-                primeiro_digito = x
+                primeiro_digito_input = x
             else:
-                primeiro_digito = '_'
+                primeiro_digito_input = '_'
             
             if b == y:
-                segundo_digito = y
+                segundo_digito_input = y
             else:
-                segundo_digito = '_'
+                segundo_digito_input = '_'
 
             if c == z:
-                terceiro_digito = z
+                terceiro_digito_input = z
             else:
-                terceiro_digito = '_'
+                terceiro_digito_input = '_'
 
             if d == w:
-                quarto_digito = w
+                quarto_digito_input = w
             else:
-                quarto_digito = '_'
+                quarto_digito_input = '_'
 
             if chute == numero_secreto:
                 print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
@@ -242,7 +248,9 @@ while condicao_continuar_parar != 1:
                     dica_par_impar -= 1
                     dica_maior_menor += 1
                     
-            print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+            print(f'\nSeu dígito é: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
+            input('<<< Tecle enter para continuar >>>')
+            os.system('cls')
             cont += 1
 
     continuar_parar = int(input('\nDeseja continuar o jogo? 1 = SIM || 0 = NÃO: '))

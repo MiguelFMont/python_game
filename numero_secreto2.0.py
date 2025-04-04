@@ -85,6 +85,11 @@ while condicao_jogar_novamente_ou_parar != '1':
     terceiro_digito = '_'
     quarto_digito = '_'
 
+    primeiro_digito_input = '_'
+    segundo_digito_input = '_'
+    terceiro_digito_input = '_'
+    quarto_digito_input = '_' 
+
     tentativas = 0
     dica_par_impar = 1
     dica_maior_menor = 0
@@ -183,15 +188,32 @@ while condicao_jogar_novamente_ou_parar != '1':
                     dica_par_impar = 1
                     digitos_certos = 1
 
-            if primeiro_digito == x:
-                if segundo_digito == y:
-                    if terceiro_digito == z:
-                        if quarto_digito == w:
-                            time.sleep(0.2)
-                            print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
-                            time.sleep(0.2)
-                            print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
-                            break
+            if a == x:
+                primeiro_digito_input = x
+            else:
+                primeiro_digito_input = '_'
+            
+            if b == y:
+                segundo_digito_input = y
+            else:
+                segundo_digito_input = '_'
+
+            if c == z:
+                terceiro_digito_input = z
+            else:
+                terceiro_digito_input = '_'
+
+            if d == w:
+                quarto_digito_input = w
+            else:
+                quarto_digito_input = '_'
+
+            if chute == numero_secreto:
+                time.sleep(0.2)
+                print(f'\nVocê acertou o número secreto!!\nNúmero de tentativas: {tentativas}\n')
+                time.sleep(0.2)
+                print(f'Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+                break
 
             if digitos_certos == 0:
                 time.sleep(0.2)
@@ -286,7 +308,7 @@ while condicao_jogar_novamente_ou_parar != '1':
                     dica_par_impar -= 1
                     dica_maior_menor += 1
             time.sleep(0.2)
-            print(f'\nDigitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}')
+            print(f'\nSeu dígito é: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}')
             cont += 1
             time.sleep(0.4)
             input('\n<<< Tecle enter para próxima tentativa >>>')
