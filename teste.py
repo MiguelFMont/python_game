@@ -101,7 +101,7 @@ while condicao_jogar_novamente_ou_parar != 1:
     z = (numero_secreto // 10) % 10
     w = numero_secreto % 10
 
-    print(numero_secreto)
+    #print(numero_secreto)
 
     primeiro_digito = '_'
     segundo_digito = '_'
@@ -126,31 +126,33 @@ while condicao_jogar_novamente_ou_parar != 1:
         
             if mensagem_chute == 1:
                      time.sleep(0.4)
-                     print('''           
+                     print('''                        
                                                                                                       ▀
-                        █▀█ █▀█ █ █▀▄▀█ █▀▀ █ █▀█ █▀█   █▀▀ █░█ █░█ ▀█▀ █▀▀         █░█ ▄▀█ █   █░░ ▄▀█ █
-                        █▀▀ █▀▄ █ █░▀░█ ██▄ █ █▀▄ █▄█   █▄▄ █▀█ █▄█ ░█░ ██▄ ▄ ▄ ▄   ▀▄▀ █▀█ █   █▄▄ █▀█ ▄
+                          █▀█ █▀█ █ █▀▄▀█ █▀▀ █ █▀█ █▀█   █▀▀ █░█ █░█ ▀█▀ █▀▀         █░█ ▄▀█ █   █░░ ▄▀█ █
+                          █▀▀ █▀▄ █ █░▀░█ ██▄ █ █▀▄ █▄█   █▄▄ █▀█ █▄█ ░█░ ██▄ ▄ ▄ ▄   ▀▄▀ █▀█ █   █▄▄ █▀█ ▄
                                                                                                             ''')
             else:     
                 time.sleep(0.4)
                 print('''
-                        ▄▀█ █▀▀ █░█ ▄▀█ █▀█ █▀▄ ▄▀█ █▄░█ █▀▄ █▀█   ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█ 
-                        █▀█ █▄█ █▄█ █▀█ █▀▄ █▄▀ █▀█ █░▀█ █▄▀ █▄█   ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ ▄ ▄ ▄''')
+                          ▄▀█ █▀▀ █░█ ▄▀█ █▀█ █▀▄ ▄▀█ █▄░█ █▀▄ █▀█   ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█ 
+                          █▀█ █▄█ █▄█ █▀█ █▀▄ █▄▀ █▀█ █░▀█ █▄▀ █▄█   ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ ▄ ▄ ▄''')
             print(f'''                                       
-                                                 ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                                  Tentativas restantes: {10-tentativas}
-                                                 ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯''')
+                                                   ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                                    Tentativas restantes: {10-tentativas}
+                                                   ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯''')
             time.sleep(0.2)
             print(f'''
-                                            ╭────────────────────────────────────╮
-                                             Digitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
-                                            ╰────────────────────────────────────╯''')
+                                              ╭────────────────────────────────────╮
+                                               Digitos descobertos são: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
+                                              ╰────────────────────────────────────╯''')
             time.sleep(0.2)
-            chute = int(input(f''' 
-                                                      ┌────────────────┐
-                                                       Digite seu chute 
-                                                      └────────────────┘                               
-                                                           => '''))
+            chute = (input(f''' 
+                                                        ┌────────────────┐
+                                                         Digite seu chute 
+                                                        └────────────────┘                               
+                                                             => '''))
+            time.sleep(0.3)
+            os.system('cls')
             if chute < 1000 or chute > 9999:
                 os.system('cls')
                 time.sleep(0.5)
@@ -185,16 +187,6 @@ while condicao_jogar_novamente_ou_parar != 1:
                                                         ╰────────────────────╯''')
                         break
             else:
-                if tentativas == 10:
-                        if chute != numero_secreto:
-                            print(f'''       ▄▀▄▀
-                                        █▄░█ ▄▀█ █▀█   █▀▀ █▀█ █   █▀▄ █▀▀ █▀ █▀ ▄▀█   █░█ █▀▀ ▀█ 
-                                        █░▀█ █▀█ █▄█   █▀░ █▄█ █   █▄▀ ██▄ ▄█ ▄█ █▀█   ▀▄▀ ██▄ █▄ ▄ ▄ ▄
-                            
-                                                        ╭────────────────────╮
-                                                         Número secreto: {numero_secreto}
-                                                        ╰────────────────────╯''')
-                        break
                 tentativas += 1
 
                 a = (chute // 1000)
@@ -203,288 +195,302 @@ while condicao_jogar_novamente_ou_parar != 1:
                 d = chute % 10
                 time.sleep(0.2)
                 print('''
-                                          █▀▀ █▀█ █▀▄▀█ █▀█ ▄▀█ █▀█ ▄▀█ █▄ █ █▀▄ █▀█ 
-                                          █▄▄ █▄█ █ ▀ █ █▀▀ █▀█ █▀▄ █▀█ █ ▀█ █▄▀ █▄█ ▄ ▄
-    ''')        
-                if primeiro_digito != x:
-                    if a == x:
-                        primeiro_digito = x
-                        time.sleep(1.5)
-                        print(f'''
-                                            ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                             Você acertou o primeiro dígito (/ ͡❛ _> ͡❛)/!
-                                            ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
-                            ''')
-                        dica_maior_menor = 0
-                        dica_par_impar = 1
-                        digitos_certos = 1
-                            
-                if segundo_digito != y:
-                    if b == y:
-                        segundo_digito = y
-                        time.sleep(1.5)
-                        print(f'''
-                                            ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                             Você acertou o segundo digito (/ ͡❛ _> ͡❛)/!
-                                            ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯  
-                            ''')
-                        dica_maior_menor = 0
-                        dica_par_impar = 1
-                        digitos_certos = 1
-
-                if terceiro_digito != z:
-                    if c == z:
-                        terceiro_digito = z
-                        time.sleep(1.5)
-                        print(f'''
-                                            ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                             Você acertou o terceiro dígito (/ ͡❛ _> ͡❛)/!
-                                            ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯ 
-                            ''')
-                        dica_maior_menor = 0
-                        dica_par_impar = 1
-                        digitos_certos = 1
-
-                if quarto_digito != w:      
-                    if d == w:
-                        quarto_digito = w
-                        time.sleep(1.5)
-                        print(f'''
-                                            ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                             Você acertou o quarto dígito (/ ͡❛ _> ͡❛)/!
-                                            ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
-                            ''')
-                        dica_maior_menor = 0
-                        dica_par_impar = 1
-                        digitos_certos = 1
-
+                                           █▀▀ █▀█ █▀▄▀█ █▀█ ▄▀█ █▀█ ▄▀█ █▄ █ █▀▄ █▀█ 
+                                           █▄▄ █▄█ █ ▀ █ █▀▀ █▀█ █▀▄ █▀█ █ ▀█ █▄▀ █▄█ ▄ ▄
+''')        
+            if primeiro_digito != x:
                 if a == x:
-                    primeiro_digito_input = x
-                else:
-                    primeiro_digito_input = '_'
-                
-                if b == y:
-                    segundo_digito_input = y
-                else:
-                    segundo_digito_input = '_'
-
-                if c == z:
-                    terceiro_digito_input = z
-                else:
-                    terceiro_digito_input = '_'
-
-                if d == w:
-                    quarto_digito_input = w
-                else:
-                    quarto_digito_input = '_'
-
-                if chute == numero_secreto:
+                    primeiro_digito = x
                     time.sleep(1.5)
-                    print(f'''                                          
+                    print(f'''
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o primeiro dígito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                          ''')
+                    dica_maior_menor = 0
+                    dica_par_impar = 1
+                    digitos_certos = 1
+                        
+            if segundo_digito != y:
+                if b == y:
+                    segundo_digito = y
+                    time.sleep(1.5)
+                    print(f'''
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o segundo digito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯  
+                          ''')
+                    dica_maior_menor = 0
+                    dica_par_impar = 1
+                    digitos_certos = 1
+
+            if terceiro_digito != z:
+                if c == z:
+                    terceiro_digito = z
+                    time.sleep(1.5)
+                    print(f'''
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o terceiro dígito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯ 
+                          ''')
+                    dica_maior_menor = 0
+                    dica_par_impar = 1
+                    digitos_certos = 1
+
+            if quarto_digito != w:      
+                if d == w:
+                    quarto_digito = w
+                    time.sleep(1.5)
+                    print(f'''
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o quarto dígito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                          ''')
+                    dica_maior_menor = 0
+                    dica_par_impar = 1
+                    digitos_certos = 1
+
+            if a == x:
+                primeiro_digito_input = x
+            else:
+                primeiro_digito_input = '_'
+            
+            if b == y:
+                segundo_digito_input = y
+            else:
+                segundo_digito_input = '_'
+
+            if c == z:
+                terceiro_digito_input = z
+            else:
+                terceiro_digito_input = '_'
+
+            if d == w:
+                quarto_digito_input = w
+            else:
+                quarto_digito_input = '_'
+
+            if chute == numero_secreto:
+                time.sleep(1.5)
+                print(f'''                                          
                         ▄▀▄░░                                           ▄▀░░
             █░█ █▀█ █▀▀ █▀▀   ▄▀█ █▀▀ █▀▀ █▀█ ▀█▀ █▀█ █░█   █▀█   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█   █▀ █▀▀ █▀▀ █▀█ █▀▀ ▀█▀ █▀█ █ █
             ▀▄▀ █▄█ █▄▄ ██▄   █▀█ █▄▄ ██▄ █▀▄ ░█░ █▄█ █▄█   █▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█   ▄█ ██▄ █▄▄ █▀▄ ██▄ ░█░ █▄█ ▄ ▄
-                        
-                                                    ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                                     Número de tentativas: {tentativas}
-                                                    ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
-    ''')
-                    time.sleep(1.5)
-                    print(f'''  
-                                                    ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                                     Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
-                                                    ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
-    ''')
+                      
+                                                   ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                                    Número de tentativas: {tentativas}
+                                                   ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+''')
+                time.sleep(1.5)
+                print(f'''  
+                                                   ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                                    Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
+                                                   ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+''')
+                break
+
+            if digitos_certos == 0:
+                time.sleep(1.5)
+                print('''\n
+                                       ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                        Você não acertou nenhum dígito dessa vez... (;＿;)
+                                       ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                      ''')
+
+            if tentativas == 10:
+                if chute != numero_secreto:
+                    time.sleep(1)
+                    print(f'''      
+                                          ▄▀▄▀
+                                     █▄░█ ▄▀█ █▀█   █▀▀ █▀█ █   █▀▄ █▀▀ █▀ █▀ ▄▀█   █░█ █▀▀ ▀█ 
+                                     █░▀█ █▀█ █▄█   █▀░ █▄█ █   █▄▀ ██▄ ▄█ ▄█ █▀█   ▀▄▀ ██▄ █▄ ▄ ▄ ▄
+                          
+                                                     ╭────────────────────╮
+                                                      Número secreto: {numero_secreto}
+                                                     ╰────────────────────╯''')
                     break
 
-                if digitos_certos == 0:
-                    time.sleep(1.5)
-                    print('''\n
-                                      ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                       Você não acertou nenhum dígito dessa vez... (;＿;)
-                                      ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
-                        ''')
+            digitos_certos = 0
+            time.sleep(1.5)
+            print(f'''
+                                                   ╭──────────────────────────╮
+                                                    faltam {10-tentativas} tentativa(s)...
+                                                   ╰──────────────────────────╯
+                  ''') 
 
-                digitos_certos = 0
+            if tentativas >= 5:
                 time.sleep(1.5)
                 print(f'''
-                                                ╭───────────────────────────╮
-                                                 faltam {10-tentativas} tentativa(s)...
-                                                ╰───────────────────────────╯
-                    ''') 
-
-                if tentativas >= 5:
-                    time.sleep(1.5)
-                    print(f'''
-                                                   .-----------------------.
-                                                   | Vou te dar uma dica!! |
-                                                   '-----------------------'
-                        ''')
-                    if dica_maior_menor == 1:
-                        if primeiro_digito != x:
-                            if a > x:
-                                    time.sleep(1.5)
-                                    print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O primeiro dígito é menor que {a}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                    primeiro_digito = f'<{a}'
-                            else:
-                                time.sleep(1.5) 
+                                                     .-----------------------.
+                                                     | Vou te dar uma dica!! |
+                                                     '-----------------------'
+                      ''')
+                if dica_maior_menor == 1:
+                    if primeiro_digito != x:
+                        if a > x:
+                                time.sleep(1.5)
                                 print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O primeiro dígito é maior que {a}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                primeiro_digito = f'>{a}'
-                        elif segundo_digito != y:
-                            if b > y:
-                                    time.sleep(1.5)
+                                              ╭────────────────────────────────────╮
+                                               ==> O primeiro dígito é menor que {a}
+                                              ╰────────────────────────────────────╯
+''')
+                                primeiro_digito = f'<{a}'
+                        else:
+                            time.sleep(1.5) 
+                            print(f'''
+                                              ╭────────────────────────────────────╮
+                                               ==> O primeiro dígito é maior que {a}
+                                              ╰────────────────────────────────────╯
+''')
+                            primeiro_digito = f'>{a}'
+                    elif segundo_digito != y:
+                        if b > y:
+                                time.sleep(1.5)
 
-                                    print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
+                                print(f'''
+                                               ╭───────────────────────────────────╮ 
                                                 ==> O segundo dígito é menor que {b}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
-    ''')
-                                    segundo_digito = f'<{b}'
-                            else:
+                                               ╰───────────────────────────────────╯
+''')
+                                segundo_digito = f'<{b}'
+                        else:
+                            time.sleep(1.5)
+                            print(f'''
+                                               ╭──────────────────────────────────╮
+                                               ==> O segundo dígito é maior que {b}
+                                               ╰──────────────────────────────────╯
+''')
+                            segundo_digito = f'>{b}'
+                    elif terceiro_digito != z:           
+                        if c > z:
                                 time.sleep(1.5)
                                 print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
-                                                ==> O segundo dígito é maior que {b}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
-    ''')
-                                segundo_digito = f'>{b}'
-                        elif terceiro_digito != z:           
-                            if c > z:
-                                    time.sleep(1.5)
-                                    print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O terceiro dígito é menor que {c}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                    terceiro_digito = f'<{c}'
-                            else:
+                                               ╭───────────────────────────────────╮
+                                               ==> O terceiro dígito é menor que {c}
+                                               ╰───────────────────────────────────╯
+''')
+                                terceiro_digito = f'<{c}'
+                        else:
+                            time.sleep(1.5)
+                            print(f'''
+                                               ╭───────────────────────────────────╮
+                                               ==> O terceiro dígito é maior que {c}
+                                               ╰───────────────────────────────────╯
+''')
+                            terceiro_digito = f'>{c}'
+                    elif quarto_digito != w:           
+                        if d > w:
                                 time.sleep(1.5)
                                 print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O terceiro dígito é maior que {c}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                terceiro_digito = f'>{c}'
-                        elif quarto_digito != w:           
-                            if d > w:
-                                    time.sleep(1.5)
-                                    print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                ╭─────────────────────────────────╮
                                                 ==> O quarto dígito é menor que {d}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                    quarto_digito = f'<{d}'
-                            else:
-                                time.sleep(1.5)
-                                print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                ╰─────────────────────────────────╯
+''')
+                                quarto_digito = f'<{d}'
+                        else:
+                            time.sleep(1.5)
+                            print(f'''
+                                                ╭─────────────────────────────────╮
                                                 ==> O quarto dígito é maior que {d}
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                quarto_digito = f'>{d}'
-                            
-                    if dica_par_impar == 1:
-                        if primeiro_digito != x:
-                            if x % 2 == 0:
-                                time.sleep(1.5)
-                                print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O primeiro dígito é par!
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                primeiro_digito = 'PAR'   
-                            else:
-                                time.sleep(1.5)
-                                print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O primeiro dígito é ímpar!
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                primeiro_digito = 'ÍMPAR'
+                                                ╰─────────────────────────────────╯
+''')
+                            quarto_digito = f'>{d}'
+                        
+                if dica_par_impar == 1:
+                    if primeiro_digito != x:
+                        if x % 2 == 0:
+                            time.sleep(1.5)
+                            print(f'''
+                                                   ╭───────────────────────────╮
+                                                   ==> O primeiro dígito é par!
+                                                   ╰───────────────────────────╯
+''')
+                            primeiro_digito = 'PAR'   
+                        else:
+                            time.sleep(1.5)
+                            print(f'''
+                                                   ╭─────────────────────────────╮
+                                                   ==> O primeiro dígito é ímpar!
+                                                   ╰─────────────────────────────╯
+''')
+                            primeiro_digito = 'ÍMPAR'
 
-                        elif segundo_digito != y:
-                            if y % 2 == 0:
-                                    time.sleep(1.5)
-                                    print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O segundo dígito é par!
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                    segundo_digito = 'PAR'
-                            else:
+                    elif segundo_digito != y:
+                        if y % 2 == 0:
                                 time.sleep(1.5)
                                 print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O segundo dígito é ímpar!
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                segundo_digito = 'ÍMPAR'
+                                                    ╭──────────────────────────╮
+                                                    ==> O segundo dígito é par!
+                                                    ╰──────────────────────────╯
+''')
+                                segundo_digito = 'PAR'
+                        else:
+                            time.sleep(1.5)
+                            print(f'''
+                                                   ╭────────────────────────────╮
+                                                   ==> O segundo dígito é ímpar!
+                                                   ╰────────────────────────────╯
+''')
+                            segundo_digito = 'ÍMPAR'
 
-                        elif terceiro_digito != z:
-                            if z % 2 == 0:
-                                    time.sleep(1.5)
-                                    print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O terceiro dígito é par!
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                    terceiro_digito = 'PAR'
-                            else:
+                    elif terceiro_digito != z:
+                        if z % 2 == 0:
                                 time.sleep(1.5)
                                 print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O terceiro dígito é ímpar!
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                terceiro_digito = 'ÍMPAR'
+                                                   ╭───────────────────────────╮
+                                                   ==> O terceiro dígito é par!
+                                                   ╰───────────────────────────╯
+''')
+                                terceiro_digito = 'PAR'
+                        else:
+                            time.sleep(1.5)
+                            print(f'''
+                                                   ╭─────────────────────────────╮
+                                                   ==> O terceiro dígito é ímpar!
+                                                   ╰─────────────────────────────╯
+''')
+                            terceiro_digito = 'ÍMPAR'
 
-                        elif quarto_digito != w:
-                            if w % 2 == 0:
-                                    time.sleep(1.5)
-                                    print(f'''
-                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                    ==> O quarto dígito é par!
-                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                    quarto_digito = 'PAR'
-                            else:
+                    elif quarto_digito != w:
+                        if w % 2 == 0:
                                 time.sleep(1.5)
                                 print(f'''
-                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                     ╭─────────────────────────╮
+                                                     ==> O quarto dígito é par!
+                                                     ╰─────────────────────────╯
+''')
+                                quarto_digito = 'PAR'
+                        else:
+                            time.sleep(1.5)
+                            print(f'''
+                                                    ╭───────────────────────────╮
                                                     ==> O quarto dígito é ímpar!
-                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    ''')
-                                quarto_digito = 'ÍMPAR'
-                                    
-                        dica_par_impar -= 1
-                        dica_maior_menor += 1
-                time.sleep(1.5)
-                print(f'''
-                                               ╭────────────────────────────────╮
-                                                Seus digitos certos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}
-                                               ╰────────────────────────────────╯
-    ''')
-                cont += 1
-                time.sleep(1.5)
-                input('''                         
-                                                                                                 ▀               ▀▀█ 
-                        ▀█▀ █▀▀ █▀▀ █░░ █▀▀   █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀█ █▀█ █▀█ ▀▄▀ █ █▀▄▀█ ▄▀█
-                        ░█░ ██▄ █▄▄ █▄▄ ██▄   ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▀▀ █▀▄ █▄█ █░█ █ █░▀░█ █▀█
-
+                                                    ╰───────────────────────────╯
+''')
+                            quarto_digito = 'ÍMPAR'
+                                
+                    dica_par_impar -= 1
+                    dica_maior_menor += 1
+            time.sleep(1.5)
+            print(f'''
+                                                ╭────────────────────────────────╮
+                                                 Seus digitos certos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}
+                                                ╰────────────────────────────────╯
+''')
+            cont += 1
+            time.sleep(1.5)
+            input('''\n                                                    
+                                                                                               ▄▀               ▀▀█ 
+                      ▀█▀ █▀▀ █▀▀ █░░ █▀▀   █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀█ █▀█ █▀█ ▀▄▀ █ █▀▄▀█ ▄▀█
+                      ░█░ ██▄ █▄▄ █▄▄ ██▄   ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▀▀ █▀▄ █▄█ █░█ █ █░▀░█ █▀█
+  
                                                 ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█
                                                 ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ 
-                      █▄▄        \n''')
-                os.system('cls')
-                mensagem_chute = 2
+                    █▄▄        \n''')
+            os.system('cls')
+            mensagem_chute = 2
             
+
 
     while validacao_jogar_parar == 0: 
         time.sleep(0.2)

@@ -102,7 +102,7 @@ while condicao_jogar_novamente_ou_parar != '1':
     z = (numero_secreto // 10) % 10
     w = numero_secreto % 10
 
-    print(numero_secreto)
+    #print(numero_secreto)
 
     primeiro_digito = '_'
     segundo_digito = '_'
@@ -130,7 +130,8 @@ while condicao_jogar_novamente_ou_parar != '1':
         while validacao_de_entrada == 0:
             if mensagem_chute == 1:
                      time.sleep(0.4)
-                     print('''                                                                        ▀
+                     print('''                        
+                                                                                                      ▀
                         █▀█ █▀█ █ █▀▄▀█ █▀▀ █ █▀█ █▀█   █▀▀ █░█ █░█ ▀█▀ █▀▀         █░█ ▄▀█ █   █░░ ▄▀█ █
                         █▀▀ █▀▄ █ █░▀░█ ██▄ █ █▀▄ █▄█   █▄▄ █▀█ █▄█ ░█░ ██▄ ▄ ▄ ▄   ▀▄▀ █▀█ █   █▄▄ █▀█ ▄
                                                                                                             ''')
@@ -140,9 +141,9 @@ while condicao_jogar_novamente_ou_parar != '1':
                         ▄▀█ █▀▀ █░█ ▄▀█ █▀█ █▀▄ ▄▀█ █▄░█ █▀▄ █▀█   ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█ 
                         █▀█ █▄█ █▄█ █▀█ █▀▄ █▄▀ █▀█ █░▀█ █▄▀ █▄█   ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ ▄ ▄ ▄''')
             print(f'''                                       
-                                                 ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                                  Tentativas restantes: {10-tentativas}
-                                                 ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯''')
+                                                  ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                                   Tentativas restantes: {10-tentativas}
+                                                  ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯''')
             time.sleep(0.2)
             print(f'''
                                              ╭────────────────────────────────────╮
@@ -150,28 +151,30 @@ while condicao_jogar_novamente_ou_parar != '1':
                                              ╰────────────────────────────────────╯''')
             time.sleep(0.2)
             chute = (input(f''' 
-                                                      ┌────────────────┐
-                                                       Digite seu chute 
-                                                      └────────────────┘                               
-                                                           => '''))
+                                                       ┌────────────────┐
+                                                        Digite seu chute 
+                                                       └────────────────┘                               
+                                                            => '''))
+            time.sleep(0.3)
+            os.system('cls')
             if chute == '':
                 os.system('cls')
                 time.sleep(0.5)
                 print('''
-                                                    █▀▀ █▀█ █▀█ █▀█ █ █
-                                                    ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                                                       █▀▀ █▀█ █▀█ █▀█ █ █
+                                                       ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
                 time.sleep(0.5)
                 print('''
                                                                              ▄▀
-                       █▀▄ █ █▀▀ █ ▀█▀ █▀▀   ▄▀█ █▀█ █▀▀ █▄░█ ▄▀█ █▀   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀ ░
-                       █▄▀ █ █▄█ █ ░█░ ██▄   █▀█ █▀▀ ██▄ █░▀█ █▀█ ▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█ ▄
+                           █▀▄ █ █▀▀ █ ▀█▀ █▀▀   ▄▀█ █▀█ █▀▀ █▄░█ ▄▀█ █▀   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀ ░
+                           █▄▀ █ █▄█ █ ░█░ ██▄   █▀█ █▀▀ ██▄ █░▀█ █▀█ ▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█ ▄
 ''')
                 time.sleep(0.5)
                 input('''                                                                        
-                                                                                                    ▀▀█  
-                         █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                         ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                       █▄▄
+                                                                                                        ▀▀█  
+                             █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                             ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                           █▄▄
                             ''')
                 os.system('cls')
                 cont_validacao_errada += 1
@@ -183,20 +186,20 @@ while condicao_jogar_novamente_ou_parar != '1':
                         os.system('cls')
                         time.sleep(0.5)
                         print('''
-                                                    █▀▀ █▀█ █▀█ █▀█ █ █
-                                                    ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                                                       █▀▀ █▀█ █▀█ █▀█ █ █
+                                                       ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
                         time.sleep(0.5)
                         print('''
                                                                               ▄▀
-                        █▀▄ █ █▀▀ █ ▀█▀ █▀▀   ▄▀█ █▀█ █▀▀ █▄░█ ▄▀█ █▀   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀ ░
-                        █▄▀ █ █▄█ █ ░█░ ██▄   █▀█ █▀▀ ██▄ █░▀█ █▀█ ▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█ ▄
+                           █▀▄ █ █▀▀ █ ▀█▀ █▀▀   ▄▀█ █▀█ █▀▀ █▄░█ ▄▀█ █▀   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀ ░
+                           █▄▀ █ █▄█ █ ░█░ ██▄   █▀█ █▀▀ ██▄ █░▀█ █▀█ ▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█ ▄
                         ''')
                         time.sleep(0.5)
                         input('''                                                                        
-                                                                                                     ▀▀█  
-                          █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                          ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                        █▄▄
+                                                                                                        ▀▀█  
+                             █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                             ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                           █▄▄
                             ''')
                         os.system('cls')
                         cont_validacao_errada += 1
@@ -209,19 +212,19 @@ while condicao_jogar_novamente_ou_parar != '1':
                         os.system('cls')
                         time.sleep(0.5)
                         print('''
-                                                    █▀▀ █▀█ █▀█ █▀█ █ █
-                                                    ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                                                       █▀▀ █▀█ █▀█ █▀█ █ █
+                                                       ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
                         time.sleep(0.5)
                         print('''
                       ▄▀       
-                █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀   █▀▀ █▀█ █▀█ ▄▀█   █▀▄ █▀█   █ █▄░█ ▀█▀ █▀▀ █▀█ █░█ ▄▀█ █░░ █▀█ █
-                █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█   █▀░ █▄█ █▀▄ █▀█   █▄▀ █▄█   █ █░▀█ ░█░ ██▄ █▀▄ ▀▄▀ █▀█ █▄▄ █▄█ ▄''')
+                  █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█ █▀   █▀▀ █▀█ █▀█ ▄▀█   █▀▄ █▀█   █ █▄░█ ▀█▀ █▀▀ █▀█ █░█ ▄▀█ █░░ █▀█ █
+                  █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█ ▄█   █▀░ █▄█ █▀▄ █▀█   █▄▀ █▄█   █ █░▀█ ░█░ ██▄ █▀▄ ▀▄▀ █▀█ █▄▄ █▄█ ▄''')
                         time.sleep(0.5)
                         input('''                                                                        
-                                                                                                     ▀▀█  
-                          █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
-                          ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
-                        █▄▄
+                                                                                                      ▀▀█  
+                           █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀▀ █▀█ █▄░█ ▀█▀ █ █▄░█ █░█ ▄▀█ █▀█   
+                           ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▄▄ █▄█ █░▀█ ░█░ █ █░▀█ █▄█ █▀█ █▀▄
+                         █▄▄
                             ''')
                         os.system('cls')
                         cont_validacao_errada += 1
@@ -231,12 +234,10 @@ while condicao_jogar_novamente_ou_parar != '1':
                         tentativas += 1
                         break
             if tentativas == 10:
-                    break
-               
-        if tentativas <= 10:
-            if tentativas == 10:
                 if chute != numero_secreto:
-                    print(f'''            ▄▀▄▀
+                    time.sleep(1)
+                    print(f'''      
+                                          ▄▀▄▀
                                      █▄░█ ▄▀█ █▀█   █▀▀ █▀█ █   █▀▄ █▀▀ █▀ █▀ ▄▀█   █░█ █▀▀ ▀█ 
                                      █░▀█ █▀█ █▄█   █▀░ █▄█ █   █▄▀ ██▄ ▄█ ▄█ █▀█   ▀▄▀ ██▄ █▄ ▄ ▄ ▄
                           
@@ -244,6 +245,8 @@ while condicao_jogar_novamente_ou_parar != '1':
                                                       Número secreto: {numero_secreto}
                                                      ╰────────────────────╯''')
                     break
+               
+        if tentativas <= 10:
 
             a = (chute // 1000)
             b = (chute // 100 - (chute // 100 - (chute % 1000))) // 100
@@ -251,17 +254,17 @@ while condicao_jogar_novamente_ou_parar != '1':
             d = chute % 10
             time.sleep(0.2)
             print('''
-                                        █▀▀ █▀█ █▀▄▀█ █▀█ ▄▀█ █▀█ ▄▀█ █▄ █ █▀▄ █▀█ 
-                                        █▄▄ █▄█ █ ▀ █ █▀▀ █▀█ █▀▄ █▀█ █ ▀█ █▄▀ █▄█ ▄ ▄
+                                           █▀▀ █▀█ █▀▄▀█ █▀█ ▄▀█ █▀█ ▄▀█ █▄ █ █▀▄ █▀█ 
+                                           █▄▄ █▄█ █ ▀ █ █▀▀ █▀█ █▀▄ █▀█ █ ▀█ █▄▀ █▄█ ▄ ▄
 ''')        
             if primeiro_digito != x:
                 if a == x:
                     primeiro_digito = x
                     time.sleep(1.5)
                     print(f'''
-                                        ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                          Você acertou o primeiro dígito (/ ͡❛ _> ͡❛)/!
-                                        ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o primeiro dígito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
                           ''')
                     dica_maior_menor = 0
                     dica_par_impar = 1
@@ -272,9 +275,9 @@ while condicao_jogar_novamente_ou_parar != '1':
                     segundo_digito = y
                     time.sleep(1.5)
                     print(f'''
-                                        ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                          Você acertou o segundo digito (/ ͡❛ _> ͡❛)/!
-                                        ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯  
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o segundo digito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯  
                           ''')
                     dica_maior_menor = 0
                     dica_par_impar = 1
@@ -285,9 +288,9 @@ while condicao_jogar_novamente_ou_parar != '1':
                     terceiro_digito = z
                     time.sleep(1.5)
                     print(f'''
-                                        ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                          Você acertou o terceiro dígito (/ ͡❛ _> ͡❛)/!
-                                        ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯ 
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o terceiro dígito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯ 
                           ''')
                     dica_maior_menor = 0
                     dica_par_impar = 1
@@ -298,9 +301,9 @@ while condicao_jogar_novamente_ou_parar != '1':
                     quarto_digito = w
                     time.sleep(1.5)
                     print(f'''
-                                        ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                          Você acertou o quarto dígito (/ ͡❛ _> ͡❛)/!
-                                        ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                                           ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                             Você acertou o quarto dígito (/ ͡❛ _> ͡❛)/!
+                                           ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
                           ''')
                     dica_maior_menor = 0
                     dica_par_impar = 1
@@ -329,61 +332,74 @@ while condicao_jogar_novamente_ou_parar != '1':
             if chute == numero_secreto:
                 time.sleep(1.5)
                 print(f'''                                          
-                    ▄▀▄░░                                           ▄▀░░
-        █░█ █▀█ █▀▀ █▀▀   ▄▀█ █▀▀ █▀▀ █▀█ ▀█▀ █▀█ █░█   █▀█   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█   █▀ █▀▀ █▀▀ █▀█ █▀▀ ▀█▀ █▀█ █ █
-        ▀▄▀ █▄█ █▄▄ ██▄   █▀█ █▄▄ ██▄ █▀▄ ░█░ █▄█ █▄█   █▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█   ▄█ ██▄ █▄▄ █▀▄ ██▄ ░█░ █▄█ ▄ ▄
+                        ▄▀▄░░                                           ▄▀░░
+            █░█ █▀█ █▀▀ █▀▀   ▄▀█ █▀▀ █▀▀ █▀█ ▀█▀ █▀█ █░█   █▀█   █▄░█ █░█ █▀▄▀█ █▀▀ █▀█ █▀█   █▀ █▀▀ █▀▀ █▀█ █▀▀ ▀█▀ █▀█ █ █
+            ▀▄▀ █▄█ █▄▄ ██▄   █▀█ █▄▄ ██▄ █▀▄ ░█░ █▄█ █▄█   █▄█   █░▀█ █▄█ █░▀░█ ██▄ █▀▄ █▄█   ▄█ ██▄ █▄▄ █▀▄ ██▄ ░█░ █▄█ ▄ ▄
                       
-                                                 ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                                  Número de tentativas: {tentativas}
-                                                 ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                                                   ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                                    Número de tentativas: {tentativas}
+                                                   ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
 ''')
                 time.sleep(1.5)
                 print(f'''  
-                                                 ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                                  Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
-                                                 ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                                                   ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                                    Número secreto: {primeiro_digito} {segundo_digito} {terceiro_digito} {quarto_digito}
+                                                   ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
 ''')
                 break
 
             if digitos_certos == 0:
                 time.sleep(1.5)
                 print('''\n
-                                    ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
-                                     Você não acertou nenhum dígito dessa vez... (;＿;)
-                                    ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
+                                       ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╮
+                                        Você não acertou nenhum dígito dessa vez... (;＿;)
+                                       ╰ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ╯
                       ''')
+
+            if tentativas == 10:
+                if chute != numero_secreto:
+                    time.sleep(1)
+                    print(f'''      
+                                          ▄▀▄▀
+                                     █▄░█ ▄▀█ █▀█   █▀▀ █▀█ █   █▀▄ █▀▀ █▀ █▀ ▄▀█   █░█ █▀▀ ▀█ 
+                                     █░▀█ █▀█ █▄█   █▀░ █▄█ █   █▄▀ ██▄ ▄█ ▄█ █▀█   ▀▄▀ ██▄ █▄ ▄ ▄ ▄
+                          
+                                                     ╭────────────────────╮
+                                                      Número secreto: {numero_secreto}
+                                                     ╰────────────────────╯''')
+                    break
 
             digitos_certos = 0
             time.sleep(1.5)
             print(f'''
-                                               ╭───────────────────────────╮
-                                                faltam {10-tentativas} tentativa(s)...
-                                               ╰───────────────────────────╯
+                                                   ╭──────────────────────────╮
+                                                    faltam {10-tentativas} tentativa(s)...
+                                                   ╰──────────────────────────╯
                   ''') 
 
             if tentativas >= 5:
                 time.sleep(1.5)
                 print(f'''
-                                                 .-----------------------.
-                                                 | Vou te dar uma dica!! |
-                                                 '-----------------------'
+                                                     .-----------------------.
+                                                     | Vou te dar uma dica!! |
+                                                     '-----------------------'
                       ''')
                 if dica_maior_menor == 1:
                     if primeiro_digito != x:
                         if a > x:
                                 time.sleep(1.5)
                                 print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                            ==> O primeiro dígito é menor que {a}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                               ╭────────────────────────────────────╮
+                                                ==> O primeiro dígito é menor que {a}
+                                               ╰────────────────────────────────────╯
 ''')
                                 primeiro_digito = f'<{a}'
                         else:
                             time.sleep(1.5) 
                             print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                            ==> O primeiro dígito é maior que {a}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                               ╭────────────────────────────────────╮
+                                                ==> O primeiro dígito é maior que {a}
+                                               ╰────────────────────────────────────╯
 ''')
                             primeiro_digito = f'>{a}'
                     elif segundo_digito != y:
@@ -391,51 +407,51 @@ while condicao_jogar_novamente_ou_parar != '1':
                                 time.sleep(1.5)
 
                                 print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
-                                            ==> O segundo dígito é menor que {b}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
+                                               ╭───────────────────────────────────╮ 
+                                                ==> O segundo dígito é menor que {b}
+                                               ╰───────────────────────────────────╯
 ''')
                                 segundo_digito = f'<{b}'
                         else:
                             time.sleep(1.5)
                             print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
-                                            ==> O segundo dígito é maior que {b}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
+                                               ╭──────────────────────────────────╮
+                                               ==> O segundo dígito é maior que {b}
+                                               ╰──────────────────────────────────╯
 ''')
                             segundo_digito = f'>{b}'
                     elif terceiro_digito != z:           
                         if c > z:
                                 time.sleep(1.5)
                                 print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                            ==> O terceiro dígito é menor que {c}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                               ╭───────────────────────────────────╮
+                                               ==> O terceiro dígito é menor que {c}
+                                               ╰───────────────────────────────────╯
 ''')
                                 terceiro_digito = f'<{c}'
                         else:
                             time.sleep(1.5)
                             print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                            ==> O terceiro dígito é maior que {c}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                               ╭───────────────────────────────────╮
+                                               ==> O terceiro dígito é maior que {c}
+                                               ╰───────────────────────────────────╯
 ''')
                             terceiro_digito = f'>{c}'
                     elif quarto_digito != w:           
                         if d > w:
                                 time.sleep(1.5)
                                 print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                            ==> O quarto dígito é menor que {d}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                ╭─────────────────────────────────╮
+                                                ==> O quarto dígito é menor que {d}
+                                                ╰─────────────────────────────────╯
 ''')
                                 quarto_digito = f'<{d}'
                         else:
                             time.sleep(1.5)
                             print(f'''
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                            ==> O quarto dígito é maior que {d}
-                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                ╭─────────────────────────────────╮
+                                                ==> O quarto dígito é maior que {d}
+                                                ╰─────────────────────────────────╯
 ''')
                             quarto_digito = f'>{d}'
                         
@@ -444,17 +460,17 @@ while condicao_jogar_novamente_ou_parar != '1':
                         if x % 2 == 0:
                             time.sleep(1.5)
                             print(f'''
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                               ==> O primeiro dígito é par!
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                   ╭───────────────────────────╮
+                                                   ==> O primeiro dígito é par!
+                                                   ╰───────────────────────────╯
 ''')
                             primeiro_digito = 'PAR'   
                         else:
                             time.sleep(1.5)
                             print(f'''
-                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                              ==> O primeiro dígito é ímpar!
-                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                   ╭─────────────────────────────╮
+                                                   ==> O primeiro dígito é ímpar!
+                                                   ╰─────────────────────────────╯
 ''')
                             primeiro_digito = 'ÍMPAR'
 
@@ -462,17 +478,17 @@ while condicao_jogar_novamente_ou_parar != '1':
                         if y % 2 == 0:
                                 time.sleep(1.5)
                                 print(f'''
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                               ==> O segundo dígito é par!
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                    ╭──────────────────────────╮
+                                                    ==> O segundo dígito é par!
+                                                    ╰──────────────────────────╯
 ''')
                                 segundo_digito = 'PAR'
                         else:
                             time.sleep(1.5)
                             print(f'''
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                               ==> O segundo dígito é ímpar!
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                   ╭────────────────────────────╮
+                                                   ==> O segundo dígito é ímpar!
+                                                   ╰────────────────────────────╯
 ''')
                             segundo_digito = 'ÍMPAR'
 
@@ -480,17 +496,17 @@ while condicao_jogar_novamente_ou_parar != '1':
                         if z % 2 == 0:
                                 time.sleep(1.5)
                                 print(f'''
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                               ==> O terceiro dígito é par!
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                   ╭───────────────────────────╮
+                                                   ==> O terceiro dígito é par!
+                                                   ╰───────────────────────────╯
 ''')
                                 terceiro_digito = 'PAR'
                         else:
                             time.sleep(1.5)
                             print(f'''
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                               ==> O terceiro dígito é ímpar!
-                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                   ╭─────────────────────────────╮
+                                                   ==> O terceiro dígito é ímpar!
+                                                   ╰─────────────────────────────╯
 ''')
                             terceiro_digito = 'ÍMPAR'
 
@@ -498,17 +514,17 @@ while condicao_jogar_novamente_ou_parar != '1':
                         if w % 2 == 0:
                                 time.sleep(1.5)
                                 print(f'''
-                                                 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                 ==> O quarto dígito é par!
-                                                 ━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                     ╭─────────────────────────╮
+                                                     ==> O quarto dígito é par!
+                                                     ╰─────────────────────────╯
 ''')
                                 quarto_digito = 'PAR'
                         else:
                             time.sleep(1.5)
                             print(f'''
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                                                ==> O quarto dígito é ímpar!
-                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                                    ╭───────────────────────────╮
+                                                    ==> O quarto dígito é ímpar!
+                                                    ╰───────────────────────────╯
 ''')
                             quarto_digito = 'ÍMPAR'
                                 
@@ -516,25 +532,26 @@ while condicao_jogar_novamente_ou_parar != '1':
                     dica_maior_menor += 1
             time.sleep(1.5)
             print(f'''
-                                            ╭────────────────────────────────╮
-                                             Seus digitos certos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}
-                                            ╰────────────────────────────────╯
+                                                ╭────────────────────────────────╮
+                                                 Seus digitos certos são: {primeiro_digito_input} {segundo_digito_input} {terceiro_digito_input} {quarto_digito_input}
+                                                ╰────────────────────────────────╯
 ''')
             cont += 1
             time.sleep(1.5)
-            input('''\n                                                                      ▄                                       ▀▀█ 
-                    ▀█▀ █▀▀ █▀▀ █░░ █▀▀   █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀█ █▀█ █▀█ ▀▄▀ █ █▀▄▀█ ▄▀█
-                    ░█░ ██▄ █▄▄ █▄▄ ██▄   ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▀▀ █▀▄ █▄█ █░█ █ █░▀░█ █▀█
-
-                                              ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█
-                                              ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ 
-                  █▄▄        \n''')
+            input('''\n                                                    
+                                                                                               ▄▀               ▀▀█ 
+                      ▀█▀ █▀▀ █▀▀ █░░ █▀▀   █▀▀ █▄░█ ▀█▀ █▀▀ █▀█   █▀█ ▄▀█ █▀█ ▄▀█   █▀█ █▀█ █▀█ ▀▄▀ █ █▀▄▀█ ▄▀█
+                      ░█░ ██▄ █▄▄ █▄▄ ██▄   ██▄ █░▀█ ░█░ ██▄ █▀▄   █▀▀ █▀█ █▀▄ █▀█   █▀▀ █▀▄ █▄█ █░█ █ █░▀░█ █▀█
+  
+                                                ▀█▀ █▀▀ █▄░█ ▀█▀ ▄▀█ ▀█▀ █ █░█ ▄▀█
+                                                ░█░ ██▄ █░▀█ ░█░ █▀█ ░█░ █ ▀▄▀ █▀█ 
+                    █▄▄        \n''')
             os.system('cls')
             mensagem_chute = 2
             
 
     while validacao_jogar_parar == 0: 
-        time.sleep(0.2)
+        time.sleep(0.7)
         jogar_novamente_ou_parar = (input('''
                                           
                      █▀▄ █▀▀ █▀ █▀▀ ░░█ ▄▀█   ░░█ █▀█ █▀▀ ▄▀█ █▀█   █▄░█ █▀█ █░█ ▄▀█ █▀▄▀█ █▀▀ █▄░█ ▀█▀ █▀▀ ▀█
@@ -556,16 +573,16 @@ while condicao_jogar_novamente_ou_parar != '1':
             os.system('cls')
             time.sleep(0.2)
             print('''
-                                  █▀▀ █ █▄░█ ▄▀█ █░░ █ ▀█ ▄▀█ █▄░█ █▀▄ █▀█   ▄▀█ █▀█ █▀█ 
-                                  █▀░ █ █░▀█ █▀█ █▄▄ █ █▄ █▀█ █░▀█ █▄▀ █▄█   █▀█ █▀▀ █▀▀ ▄ ▄ ▄
+                                     █▀▀ █ █▄░█ ▄▀█ █░░ █ ▀█ ▄▀█ █▄░█ █▀▄ █▀█   ▄▀█ █▀█ █▀█ 
+                                     █▀░ █ █░▀█ █▀█ █▄▄ █ █▄ █▀█ █░▀█ █▄▀ █▄█   █▀█ █▀▀ █▀▀ ▄ ▄ ▄
 ''')
             break
         if jogar_novamente_ou_parar != '1' or jogar_novamente_ou_parar != '0' or jogar_novamente_ou_parar == '':
             time.sleep(0.2)
             os.system('cls')
             print('''
-                                                    █▀▀ █▀█ █▀█ █▀█ █ █
-                                                    ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
+                                                      █▀▀ █▀█ █▀█ █▀█ █ █
+                                                      ██▄ █▀▄ █▀▄ █▄█ ▄ ▄''')
             time.sleep(0.2)
             print('''
 
